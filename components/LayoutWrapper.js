@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
+import Logo from '@/data/logoWhite.svg'
 import Link from './Link'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
@@ -41,13 +41,6 @@ const LayoutWrapper = ({ children }) => {
                 <div className="mr-3">
                   <Logo />
                 </div>
-                {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="title mono-type hidden text-2xl font-semibold hover:text-primary-600 dark:hover:text-primary-400 sm:block">
-                    {siteMetadata.headerTitle}
-                  </div>
-                ) : (
-                  siteMetadata.headerTitle
-                )}
               </div>
             </Link>
           </div>
