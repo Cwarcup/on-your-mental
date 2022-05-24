@@ -1,8 +1,9 @@
 const siteMetadata = {
-  title: "Curtis' Journey",
-  author: 'Curtis Warcup',
-  headerTitle: "Curtis' Journey",
-  description: 'Curtis Warcup site',
+  title: 'On Your Mental',
+  author: 'Reuben Hardern',
+  headerTitle: 'On Your Mental',
+  description:
+    "Welcome to On Your Mental - a podcast that shares candid and open conversations between & about men and what's on their minds! Ranging from something they're working on, something they're thinking about, to relationships or general feelings. All of it's on the table!",
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://curtcodes.vercel.app/',
@@ -12,9 +13,9 @@ const siteMetadata = {
   socialBanner: '/static/images/twitter-card.png',
   email: 'curtis.gwarcup@gmail.com',
   github: 'https://github.com/Cwarcup',
-  twitter: 'https://twitter.com/Twitter',
+  twitter: 'https://www.instagram.com/onyourmentalpod/',
   facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
+  youtube: 'https://www.youtube.com/channel/UCYZNw4kprBNpxBrTcnNl_Kw/about',
   linkedin: 'https://www.linkedin.com/in/curtiswarcup/',
   locale: 'en-US',
   analytics: {
