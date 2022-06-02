@@ -16,6 +16,7 @@ const siteMetadata = {
   instagram: 'https://www.instagram.com/onyourmentalpod/',
   facebook: 'https://vm.tiktok.com/ZMd3SD8E1/',
   youtube: 'https://www.youtube.com/channel/UCYZNw4kprBNpxBrTcnNl_Kw/featured',
+  tiktok: 'https://vm.tiktok.com/ZMd3SD8E1/',
   linkedin: 'https://www.linkedin.com/in/curtiswarcup/',
   locale: 'en-US',
   analytics: {
