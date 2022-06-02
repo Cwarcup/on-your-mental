@@ -1,12 +1,13 @@
 const siteMetadata = {
-  title: "Curtis' Journey",
-  author: 'Curtis Warcup',
-  headerTitle: "Curtis' Journey",
-  description: 'Curtis Warcup site',
+  title: 'On Your Mental',
+  author: 'Reuben Hardern',
+  headerTitle: 'On Your Mental',
+  description:
+    'The podcast that encourages men to be more open and sometimes vulnerable, especially with each other.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://curtcodes.vercel.app/',
-  siteRepo: 'https://github.com/Cwarcup/personal-blog',
+  siteRepo: 'https://github.com/Cwarcup/on-your-mental',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.jpg',
   socialBanner: '/static/images/twitter-card.png',
