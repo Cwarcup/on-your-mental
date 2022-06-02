@@ -1,6 +1,7 @@
 import siteMetadata from '@/data/siteMetadata'
 import Link from 'next/link'
 import PageTitle from './PageTitle'
+import SocialIcon from './social-icons'
 
 export default function Hero() {
   return (
@@ -27,6 +28,14 @@ export default function Hero() {
             </a>
           </Link>
         </p>
+        <div className="mt-16 flex flex-col items-center">
+          <div className="mb-3 flex space-x-4">
+            <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} />
+            <SocialIcon kind="youtube" href={siteMetadata.youtube} />
+            <SocialIcon kind="tiktok" href={siteMetadata.tiktok} />
+            <SocialIcon kind="instagram" href={siteMetadata.instagram} />
+          </div>
+        </div>
       </div>
     </div>
   )

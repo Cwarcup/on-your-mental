@@ -8,6 +8,7 @@ import Image from '@/components/Image'
 import Hero from '@/components/Hero'
 
 import NewsletterForm from '@/components/NewsletterForm'
+import Footer from '@/components/Footer'
 
 const MAX_DISPLAY = 8
 
