@@ -7,14 +7,16 @@ export default function Hero() {
     <div className="flex w-full flex-col">
       <div className="space-y-2 pb-4 md:space-y-5">
         <PageTitle>
-          Hi, I'm Curtis Warcup{' '}
+          Welcome to On Your Mental
+          {/* {' '}
           <span role="img" aria-label="waving hand" className="wave">
-            👋
-          </span>
+            ✌️
+          </span> */}
         </PageTitle>
         <p className=" prose max-w-none pb-4 text-lg leading-7 text-gray-500 dark:text-gray-400">
-          I'm a self taught developer looking to improve my coding abilities everyday. Here is a
-          look into my personal note, projects and passions.{' '}
+          A podcast that shares candid and open conversations between & about men and what's on
+          their minds! Ranging from something they're working on, something they're thinking about,
+          to relationships or general feelings. All of it's on the table! 💙{' '}
           <Link href={`mailto:${siteMetadata.email}`}>
             <a
               className="font-medium leading-6 "
