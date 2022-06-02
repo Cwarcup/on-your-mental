@@ -9,8 +9,8 @@ import siteMetadata from '@/data/siteMetadata'
 import Comments from '@/components/comments'
 import { useEffect, useRef, useState } from 'react'
 
-const twitterShare = (slug) =>
-  `https://twitter.com/intent/tweet?url=${encodeURIComponent(
+const instagramShare = (slug) =>
+  `https://instagram.com/intent/tweet?url=${encodeURIComponent(
     `${siteMetadata.siteUrl}/blog/${slug}`
   )}`
 const facebookShare = (slug) =>
@@ -107,14 +107,14 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                       <dl className="whitespace-nowrap text-sm font-medium leading-5">
                         <dt className="sr-only">Name</dt>
                         <dd className="text-gray-900 dark:text-gray-100">{author.name}</dd>
-                        <dt className="sr-only">Twitter</dt>
+                        <dt className="sr-only">instagram</dt>
                         <dd>
-                          {author.twitter && (
+                          {author.instagram && (
                             <Link
-                              href={author.twitter}
+                              href={author.instagram}
                               className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                             >
-                              {author.twitter.replace('https://twitter.com/', '@')}
+                              {author.instagram.replace('https://instagram.com/', '@')}
                             </Link>
                           )}
                         </dd>
@@ -157,7 +157,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                     ></path>
                   </svg>
                 </Link>
-                <Link title="Share on Twitter" href={twitterShare(slug)}>
+                <Link title="Share on instagram" href={instagramShare(slug)}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     version="1.1"

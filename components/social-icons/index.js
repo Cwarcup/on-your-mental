@@ -3,7 +3,7 @@ import Github from './github.svg'
 import Facebook from './facebook.svg'
 import Youtube from './youtube.svg'
 import Linkedin from './linkedin.svg'
-import Twitter from './twitter.svg'
+import instagram from './instagram.svg'
 
 // Icons taken from: https://simpleicons.org/
 
@@ -13,7 +13,7 @@ const components = {
   facebook: Facebook,
   youtube: Youtube,
   linkedin: Linkedin,
-  twitter: Twitter,
+  instagram: instagram,
 }
 
 const SocialIcon = ({ kind, href, size = 8 }) => {

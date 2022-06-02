@@ -6,7 +6,7 @@ company: Simon Fraser University
 email: onyourmentalpod@gmail.com
 linkedin: https://www.linkedin.com/in/reuben-hardern/
 github: https://github.com/cwarcup
-twitter: https://twitter.com/cwarcup
+instagram: https://www.instagram.com/onyourmentalpod/
 ---
 
 I focus on building the best solutions for people, addressing every one of their needs. I find listening goes a long way in understanding just what those needs are. Helping others, both as an individual and with a team, is where I find my happiness in work!

@@ -12,7 +12,7 @@ export default function Footer() {
           <SocialIcon kind="facebook" href={siteMetadata.facebook} size="6" />
           <SocialIcon kind="youtube" href={siteMetadata.youtube} size="6" />
           <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size="6" />
-          <SocialIcon kind="twitter" href={siteMetadata.twitter} size="6" />
+          <SocialIcon kind="instagram" href={siteMetadata.instagram} size="6" />
         </div>
         <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
           <div>{siteMetadata.author}</div>
@@ -22,7 +22,7 @@ export default function Footer() {
           <Link href="/">{siteMetadata.title}</Link>
         </div>
         <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
-          <Link href="https://github.com/cwarcup/">Curtis' Code Journey</Link>
+          <Link href="https://github.com/cwarcup/">Created by cwarcup</Link>
         </div>
       </div>
     </footer>
