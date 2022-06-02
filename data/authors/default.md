@@ -1,15 +1,14 @@
 ---
-name: Curtis Warcup
+name: Reuben Hardern
 avatar: /static/images/avatar.jpg
-occupation: Lead at Apple
-company: University of British Columbia
-email: curtisgwarcup@gmail.com
-linkedin: https://www.linkedin.com/in/curtiswarcup/
+occupation: Pro at Apple by day, Podcaster by night
+company: Simon Fraser University
+email: onyourmentalpod@gmail.com
+linkedin: https://www.linkedin.com/in/reuben-hardern/
 github: https://github.com/cwarcup
+twitter: https://twitter.com/cwarcup
 ---
 
-Curtis is currently a Lead at an Apple retail store based in Vancouver. He manages a team of over 100 employees and is responsible for the daily operations of the store. His duties include developing and facilitating in-store training events, scheduling, driving and adopting new initiatives while maintaining a positive environment for employees and customers. He works closely with the team by promoting a feedback culture to develop the customer journey and optimize the store's performance.
+I focus on building the best solutions for people, addressing every one of their needs. I find listening goes a long way in understanding just what those needs are. Helping others, both as an individual and with a team, is where I find my happiness in work!
 
-Curtis studied Kinesiology at the University of British Columbia. He's an avid cyclist, weight lifter and enjoys enjoys experimenting with supplements, diets and lifestyle changes to improve his athletic performance.
-
-After working at Apple for over six years, Curtis felt the urge to learn something new and started learning to code on his own. He followed a basic road map developed by the Odin Project where he learnt the basics of HTML, CSS, and JavaScript. After creating a simple calculator app, he was hooked on the magical feeling of creating something and seeing it come to life. He then decided to learn more about the world of algorithms and data structures, dabbled in TypeScript and React, and continues to learn and build on his knowledge.
+My experience with sales, technical support, and employee development provides a unique perspective in the technology industry and the world of customer service. I am a strong believer in the importance of listening to the needs of others and helping them find their own happiness.
