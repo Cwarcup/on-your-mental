@@ -34,8 +34,9 @@ module.exports = {
         sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: colors.sky,
+        primary: colors.cyan,
         gray: colors.neutral,
+        ORMblue: '#05324e',
       },
       typography: (theme) => ({
         DEFAULT: {

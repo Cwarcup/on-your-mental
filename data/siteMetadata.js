@@ -5,7 +5,7 @@ const siteMetadata = {
   description:
     'The podcast that encourages men to be more open and sometimes vulnerable, especially with each other.',
   language: 'en-us',
-  theme: 'system', // system, dark or light
+  theme: 'dark', // system, dark or light
   siteUrl: 'https://curtcodes.vercel.app/',
   siteRepo: 'https://github.com/Cwarcup/on-your-mental',
   siteLogo: '/static/images/logo.png',
