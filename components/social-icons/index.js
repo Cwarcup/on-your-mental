@@ -3,12 +3,12 @@ import Github from './github.svg'
 import Facebook from './facebook.svg'
 import Youtube from './youtube.svg'
 import Linkedin from './linkedin.svg'
-import instagram from './instagram.svg'
-import tiktok from './tiktok.svg'
-import applepodcasts from './applepodcasts.svg'
-import spotify from './spotify.svg'
-import castro from './castro.svg'
-import overcast from './overcast.svg'
+import Instagram from './instagram.svg'
+import Tiktok from './tiktok.svg'
+import Applepodcasts from './applepodcasts.svg'
+import Spotify from './spotify.svg'
+import Castro from './castro.svg'
+import Overcast from './overcast.svg'
 
 // Icons taken from: https://simpleicons.org/
 
@@ -18,12 +18,12 @@ const components = {
   facebook: Facebook,
   youtube: Youtube,
   linkedin: Linkedin,
-  instagram: instagram,
-  tiktok: tiktok,
-  applepodcasts: applepodcasts,
-  spotify: spotify,
-  castro: castro,
-  overcast: overcast,
+  instagram: Instagram,
+  tiktok: Tiktok,
+  applePodcasts: Applepodcasts,
+  spotify: Spotify,
+  castro: Castro,
+  overcast: Overcast,
 }
 
 const SocialIcon = ({ kind, href, size = 8 }) => {

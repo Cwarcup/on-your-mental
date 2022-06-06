@@ -5,7 +5,7 @@ import Image from './Image'
 import CustomLink from './Link'
 import TOCInline from './TOCInline'
 import YoutubeEmbed from './YoutubeEmbed'
-import AudioSocials from './audioSocials'
+import AudioSocials from './AudioSocials'
 import Pre from './Pre'
 import { BlogNewsletterForm } from './NewsletterForm'
 
