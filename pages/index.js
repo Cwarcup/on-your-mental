@@ -10,7 +10,7 @@ import Hero from '@/components/Hero'
 import NewsletterForm from '@/components/NewsletterForm'
 import Footer from '@/components/Footer'
 
-const MAX_DISPLAY = 8
+const MAX_DISPLAY = 5
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
@@ -90,11 +90,6 @@ export default function Home({ posts }) {
           >
             All Posts &rarr;
           </Link>
-        </div>
-      )}
-      {siteMetadata.newsletter.provider !== '' && (
-        <div className="flex items-center justify-center pt-4">
-          <NewsletterForm />
         </div>
       )}
     </>
