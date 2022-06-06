@@ -63,8 +63,8 @@ const LayoutWrapper = ({ children }) => {
       </header>
       <SectionContainer>
         <main className="mb-auto">{children}</main>
-        <Footer />
       </SectionContainer>
+      <Footer />
     </>
   )
 }
