@@ -13,17 +13,11 @@ export default function Hero() {
         <p className=" prose max-w-none pb-4 text-lg leading-7 text-gray-500 dark:text-gray-400">
           A podcast that shares candid and open conversations between & about men and what's on
           their minds! Ranging from something they're working on, something they're thinking about,
-          to relationships or general feelings. All of it's on the table! 💙{' '}
-          <Link href={`mailto:${siteMetadata.email}`}>
-            <a
-              className="font-medium leading-6 "
-              aria-label={`Email to ${siteMetadata.email}`}
-              title={`Email to ${siteMetadata.email}`}
-            >
-              Get in touch &rarr;
-            </a>
-          </Link>
+          to relationships or general feelings. All of it's on the table! 💙
         </p>
+        <h3 className="flex pb-6 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl">
+          Latest Episode
+        </h3>
         <div className="video-responsive">
           <iframe
             width="100%"
@@ -34,14 +28,6 @@ export default function Hero() {
             allowFullScreen
             title="Embedded youtube"
           />
-        </div>
-        <div className="mt-16 flex flex-col items-center">
-          <div className="mb-3 mt-5 flex space-x-4">
-            <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} />
-            <SocialIcon kind="youtube" href={siteMetadata.youtube} />
-            <SocialIcon kind="tiktok" href={siteMetadata.tiktok} />
-            <SocialIcon kind="instagram" href={siteMetadata.instagram} />
-          </div>
         </div>
       </div>
     </div>
