@@ -1,4 +1,3 @@
-import { useState, useEffect, useRef } from 'react'
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 import Logo from '@/data/logoWhite.svg'

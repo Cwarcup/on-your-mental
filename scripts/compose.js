@@ -41,6 +41,7 @@ const genFrontMatter = (answers) => {
   images: []
   layout: ${answers.layout}
   canonicalUrl: ${answers.canonicalUrl}
+  youtubeURL: ${answers.youtubeURL}
   `
 
   if (answers.authors.length > 0) {
@@ -96,6 +97,11 @@ inquirer
     {
       name: 'canonicalUrl',
       message: 'Enter canonical url:',
+      type: 'input',
+    },
+    {
+      name: 'youtubeURL',
+      message: 'Enter youtube url:',
       type: 'input',
     },
   ])
