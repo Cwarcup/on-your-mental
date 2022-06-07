@@ -4,7 +4,7 @@ import siteMetadata from '@/data/siteMetadata'
 export default function AudioSocials(applePodcastLink, spotifyLink, overcastLink, castroLink) {
   return (
     <>
-      <div className="mt-16 flex flex-col items-center">
+      <div className="mt-10 mb-10 flex flex-col items-center">
         <h3> Audio versions available below!</h3>
         <div className="mb-3 flex space-x-4">
           <SocialIcon kind="spotify" href={siteMetadata.github} />

@@ -6,8 +6,8 @@ company: Simon Fraser University
 email: onyourmentalpod@gmail.com
 youtube: https://www.youtube.com/channel/UCYZNw4kprBNpxBrTcnNl_Kw/featured
 github: https://github.com/cwarcup
-instagram: https://www.instagram.com/onyourmentalpod/
-tiktok: https://vm.tiktok.com/ZMd3SD8E1/
+instagram: https://www.instagram.com/onyourmentalpod
+tiktok: https://vm.tiktok.com/ZMd3SD8E1
 ---
 
 I focus on building the best solutions for people, addressing every one of their needs. I find listening goes a long way in understanding just what those needs are. Helping others, both as an individual and with a team, is where I find my happiness in work!
