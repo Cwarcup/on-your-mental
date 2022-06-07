@@ -48,7 +48,15 @@ const genFrontMatter = (answers) => {
     frontMatter = frontMatter + '\n' + `authors: [${authorArray}]`
   }
 
-  frontMatter = frontMatter + '\n---'
+  frontMatter =
+    frontMatter +
+    `\n---
+    
+    <YoutubeEmbed embedId="${answers.youtubeURL}" />
+
+    <AudioSocials />
+    
+    `
 
   return frontMatter
 }
