@@ -27,12 +27,6 @@ const VideoDetail = ({ videoId }) => {
   if (!details) {
     return <h1>Loading...</h1>
   }
-
-  // let description = details.items[0].snippet.description.replace(/\n/g, `'<br />'`)
-  // let description = details.items[0].snippet.description.split('\n').join('/')
-  console.log(details)
-  // remove all -- from description
-
   return (
     <div>
       {details.description
