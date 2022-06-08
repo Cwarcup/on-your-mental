@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
-const VideoDetail = ({ videoId }) => {
+const YoutubeDetails = ({ videoId }) => {
   const [error, setError] = useState(null)
   const [details, setDetails] = useState()
 
@@ -39,4 +39,4 @@ const VideoDetail = ({ videoId }) => {
   )
 }
 
-export default VideoDetail
+export default YoutubeDetails
