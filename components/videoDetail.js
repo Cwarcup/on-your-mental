@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 
 // const VideoDetail = () => {
 //   const requestOptions = {
@@ -64,45 +65,31 @@ import React, { useEffect, useState } from 'react'
 function VideoDetail() {
   const [error, setError] = useState(null)
   const [isLoaded, setIsLoaded] = useState(false)
-  const [items, setItems] = useState({ data: [] })
+  const [items, setItems] = useState(null)
+
+  var config = {
+    method: 'get',
+    url: 'https://www.googleapis.com/youtube/v3/search?channelId=UCYZNw4kprBNpxBrTcnNl_Kw&part=snippet&order=date&maxResults=2&key=AIzaSyA-V6h8zGB1thGF22zOVzPLrj-EsEn4X4I',
+    headers: {},
+  }
 
   useEffect(() => {
-    const requestOptions = {
-      method: 'GET',
-      redirect: 'follow',
-    }
-    fetch(
-      'https://www.googleapis.com/youtube/v3/search?channelId=UCYZNw4kprBNpxBrTcnNl_Kw&part=snippet&order=date&maxResults=2&key=AIzaSyA-V6h8zGB1thGF22zOVzPLrj-EsEn4X4I',
-      requestOptions
-    )
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          setIsLoaded(true)
-          setItems(result.items)
-        },
-        (error) => {
-          setIsLoaded(true)
-          setError(error)
-        }
-      )
+    axios(config)
+      .then((response) => response.data)
+      .then((data) => setItems(data))
+      .catch(function (error) {
+        console.log(error)
+      })
   }, [])
 
-  console.log(items)
+  console.log(items.items[0].snippet.title)
   console.log(typeof items)
 
-  if (error) {
-    return <div>Error: {error.message}</div>
-  } else if (!isLoaded) {
-    return <div>Loading...</div>
-  } else {
-    return (
-      <div>
-        <h1>Video Detail</h1>
-        <p>{}</p>
-      </div>
-    )
-  }
+  return (
+    <div>
+      <h1>Video Detail</h1>
+    </div>
+  )
 }
 
 export default VideoDetail
