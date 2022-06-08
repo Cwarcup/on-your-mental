@@ -81,10 +81,14 @@ const VideoDetail = ({ videoId }) => {
   // let description = details.items[0].snippet.description.replace(/\n/g, `'<br />'`)
   // let description = details.items[0].snippet.description.split('\n').join('/')
   console.log(details)
+  // remove all -- from description
+  let filteredDescription = details.items[0].snippet.description
+    .replace(/___________________________________________________________________________/g, '')
+    .split('\n')
 
   return (
     <div>
-      {details.items[0].snippet.description.split('\n').map((item, index) => {
+      {filteredDescription.map((item, index) => {
         return <p key={index}>{item}</p>
       })}
     </div>
