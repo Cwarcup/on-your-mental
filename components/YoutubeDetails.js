@@ -22,7 +22,7 @@ const YoutubeDetails = ({ videoId }) => {
       }
     }
     fetchData()
-  }, [])
+  }, [videoId])
 
   if (!details) {
     return <h1>Loading...</h1>
