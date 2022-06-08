@@ -55,6 +55,8 @@ const genFrontMatter = (answers) => {
     <YoutubeEmbed embedId="${answers.youtubeURL}" />
 
     <AudioSocials />
+
+    <VideoDetail videoId="${answers.youtubeURL}" />
     
     `
 
