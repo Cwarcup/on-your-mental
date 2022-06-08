@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
-const VideoDetail = () => {
+const VideoDetail = ({ videoId }) => {
   const [error, setError] = useState(null)
   const [details, setDetails] = useState()
-
-  console.log(process.env.NEXT_PUBLIC_YOUTUBE_API_KEY)
-
-  const videoId = 'h5yUZ0MNXx4'
 
   useEffect(() => {
     var config = {
@@ -31,8 +27,6 @@ const VideoDetail = () => {
   if (!details) {
     return <h1>Loading...</h1>
   }
-  console.log(details)
-  // console.log(details.items[0].snippet.description) // error here. TypeError: Cannot read properties of null (reading 'items')
 
   return (
     <div>
