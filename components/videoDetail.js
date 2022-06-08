@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import PropTypes from 'prop-types'
 
 const VideoDetail = ({ videoId }) => {
   const [error, setError] = useState(null)
@@ -38,10 +37,6 @@ const VideoDetail = ({ videoId }) => {
         })}
     </div>
   )
-}
-
-VideoDetail.propTypes = {
-  embedId: PropTypes.string.isRequired,
 }
 
 export default VideoDetail

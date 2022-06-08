@@ -6,9 +6,9 @@ import CustomLink from './Link'
 import TOCInline from './TOCInline'
 import YoutubeEmbed from './YoutubeEmbed'
 import AudioSocials from './AudioSocials'
-import VideoDetail from './VideoDetail'
 import Pre from './Pre'
 import { BlogNewsletterForm } from './NewsletterForm'
+import VideoDetail from './VideoDetail'
 
 export const MDXComponents = {
   VideoDetail,
