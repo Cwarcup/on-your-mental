@@ -28,12 +28,9 @@ const VideoDetail = ({ videoId }) => {
     return <h1>Loading...</h1>
   }
 
-  return (
-    <div>
-      <h1>Video Detail</h1>
-      <p>{details.items[0].snippet.description}</p>
-    </div>
-  )
+  let description = details.items[0].snippet.description.replace(/[\n]/g, '<br />')
+
+  return <div>{description}</div>
 }
 
 export default VideoDetail
