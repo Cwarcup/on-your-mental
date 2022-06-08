@@ -15,7 +15,7 @@ const VideoDetail = ({ videoId }) => {
     const fetchData = async () => {
       try {
         const result = await axios(config)
-        setDetails(result.data)
+        setDetails(result.data.items[0].snippet)
       } catch (error) {
         console.log('error', error)
         setError(error)
@@ -32,15 +32,15 @@ const VideoDetail = ({ videoId }) => {
   // let description = details.items[0].snippet.description.split('\n').join('/')
   console.log(details)
   // remove all -- from description
-  let filteredDescription = details.items[0].snippet.description
-    .replace(/___________________________________________________________________________/g, '')
-    .split('\n')
 
   return (
     <div>
-      {filteredDescription.map((item, index) => {
-        return <p key={index}>{item}</p>
-      })}
+      {details.description
+        .replace(/___________________________________________________________________________/g, '')
+        .split('\n')
+        .map((item, index) => {
+          return <p key={index}>{item}</p>
+        })}
     </div>
   )
 }
