@@ -73,11 +73,11 @@ export default function Episodes() {
             title="Embedded youtube"
           />
         </div>
-        <p className="prose max-w-none pb-4 pt-4 text-xl leading-7 text-gray-100">
-          {description}
+        <div className="prose max-w-none pb-4 pt-4 text-xl leading-7 text-gray-100">
+          <p>{description}</p>
 
           <AudioSocials />
-        </p>
+        </div>
         <div className="container py-12">
           <h3 className="flex pb-6 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl">
             Previous Episodes
@@ -87,6 +87,7 @@ export default function Episodes() {
               <Card
                 key={d.snippet.title}
                 title={d.snippet.title}
+                publishedAt={d.snippet.publishedAt}
                 imgSrc={d.snippet.thumbnails.high.url}
                 href={`https://www.youtube.com/watch?v=${d.id.videoId}`}
               />
