@@ -1,10 +1,43 @@
+import React, { useEffect, useState } from 'react'
 import siteMetadata from '@/data/siteMetadata'
 import Link from 'next/link'
 import PageTitle from './PageTitle'
-import SocialIcon from './social-icons'
-import YoutubeEmbed from './YoutubeEmbed'
+import ApiClient from '@/lib/apiClient'
+import AudioSocials from '@/components/AudioSocials'
 
 export default function Hero() {
+  const [latestVideo, setLatestVideo] = useState()
+  const [latestVideoDescription, setLatestVideoDescription] = useState()
+
+  useEffect(() => {
+    const fetchLatestVideo = async () => {
+      try {
+        const result = await ApiClient(
+          'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=K9PQ6IoMXpA&key='
+        )
+        setLatestVideoDescription(result[0].snippet.description)
+      } catch (error) {
+        console.log('error', error)
+      }
+    }
+    fetchLatestVideo()
+  }, [])
+
+  function getDescription(str) {
+    const descriptionArr = str.split('\n').filter((item) => item)
+    let index = descriptionArr.findIndex((v) => v.includes('Welcome back to On Your Mental')) + 1
+    return descriptionArr[index]
+  }
+
+  if (!latestVideoDescription) {
+    return <h1>Loading...</h1>
+  }
+
+  console.log('latestVideo', latestVideoDescription)
+
+  const description = getDescription(latestVideoDescription)
+  console.log(description)
+
   return (
     <div className="flex w-full flex-col">
       <div className="space-y-2 pb-4 md:space-y-5">
@@ -29,6 +62,10 @@ export default function Hero() {
             title="Embedded youtube"
           />
         </div>
+      </div>
+      <div className="prose max-w-none pb-4 pt-4 text-xl leading-7 text-gray-100">
+        <p className=" prose max-w-none pb-4 text-lg leading-7 text-gray-400">{description}</p>
+        <AudioSocials />
       </div>
     </div>
   )
