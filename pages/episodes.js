@@ -50,16 +50,29 @@ export default function Episodes() {
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Episodes
+            Latest Episode
           </h1>
         </div>
+        <div className="video-responsive">
+          <iframe
+            width="50%"
+            height="auto"
+            src="https://www.youtube.com/embed/?list=PLLlFKKLh-lgZpNlws_GGwFTAEezWY2rBn"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen="true"
+            title="Embedded youtube"
+          />
+        </div>
         <div className="container py-12">
+          <h3 className="flex pb-6 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl">
+            Episode
+          </h3>
           <div className="-m-4 flex flex-wrap">
             {details.map((d) => (
               <Card
                 key={d.snippet.title}
                 title={d.snippet.title}
-                description={d.snippet.description}
                 imgSrc={d.snippet.thumbnails.high.url}
                 href={`https://www.youtube.com/watch?v=${d.id.videoId}`}
               />
