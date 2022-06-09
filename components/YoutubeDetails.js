@@ -29,6 +29,7 @@ const YoutubeDetails = ({ videoId }) => {
   if (!details) {
     return <h1>Loading...</h1>
   }
+  console.log(details)
   return (
     <div>
       {details.description
