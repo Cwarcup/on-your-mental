@@ -4,30 +4,15 @@ import projectsData from '@/data/projectsData'
 import Card from '@/components/Card'
 import { PageSEO } from '@/components/SEO'
 import YoutubeChannelDetails from '@/lib/youtubeChannelDetails'
+import ApiClient from '@/lib/apiClient'
 
 export default function Episodes() {
   const [error, setError] = useState(null)
   const [details, setDetails] = useState()
+  const [latestVideo, setLatestVideo] = useState()
 
   useEffect(() => {
-    // var config = {
-    //   method: 'get',
-    //   url: `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&channelId=UCYZNw4kprBNpxBrTcnNl_Kw&order=date&key=${process.env.NEXT_PUBLIC_YOUTUBE_API_KEY}`,
-    //   headers: {},
-    // }
-
-    // const fetchData = async () => {
-    //   try {
-    //     const result = await axios(config)
-    //     setDetails(result.data.items)
-    //   } catch (error) {
-    //     console.log('error', error)
-    //     setError(error)
-    //   }
-    // }
-    // fetchData()
-
-    const fetchData = async () => {
+    const fetchVideosList = async () => {
       try {
         const result = await YoutubeChannelDetails()
         setDetails(result)
@@ -36,13 +21,26 @@ export default function Episodes() {
         setError(error)
       }
     }
-    fetchData()
+    fetchVideosList()
+
+    const fetchLatestVideo = async () => {
+      try {
+        const result = await ApiClient(
+          'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=K9PQ6IoMXpA&key='
+        )
+        setLatestVideo(result)
+      } catch (error) {
+        console.log('error', error)
+      }
+    }
+    fetchLatestVideo()
   }, [])
 
   if (!details) {
     return <h1>Loading...</h1>
   }
   console.log(details)
+  console.log(latestVideo)
 
   return (
     <>
@@ -60,13 +58,13 @@ export default function Episodes() {
             src="https://www.youtube.com/embed/?list=PLLlFKKLh-lgZpNlws_GGwFTAEezWY2rBn"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen="true"
+            allowFullScreen
             title="Embedded youtube"
           />
         </div>
         <div className="container py-12">
           <h3 className="flex pb-6 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl">
-            Episode
+            Previous Episodes
           </h3>
           <div className="-m-4 flex flex-wrap">
             {details.map((d) => (
