@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
+// used to fetch details of ONE specific video using the videoId
+
 const YoutubeDetails = ({ videoId }) => {
   const [error, setError] = useState(null)
   const [details, setDetails] = useState()
