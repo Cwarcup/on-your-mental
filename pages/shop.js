@@ -3,23 +3,34 @@ import siteMetadata from '@/data/siteMetadata'
 import projectsData from '@/data/projectsData'
 import Card from '@/components/Card'
 import { PageSEO } from '@/components/SEO'
-import axios from 'axios'
+import YoutubeChannelDetails from '@/lib/youtubeChannelDetails'
 
 export default function Episodes() {
   const [error, setError] = useState(null)
   const [details, setDetails] = useState()
 
   useEffect(() => {
-    var config = {
-      method: 'get',
-      url: `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&channelId=UCYZNw4kprBNpxBrTcnNl_Kw&order=date&key=${process.env.NEXT_PUBLIC_YOUTUBE_API_KEY}`,
-      headers: {},
-    }
+    // var config = {
+    //   method: 'get',
+    //   url: `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&channelId=UCYZNw4kprBNpxBrTcnNl_Kw&order=date&key=${process.env.NEXT_PUBLIC_YOUTUBE_API_KEY}`,
+    //   headers: {},
+    // }
+
+    // const fetchData = async () => {
+    //   try {
+    //     const result = await axios(config)
+    //     setDetails(result.data.items)
+    //   } catch (error) {
+    //     console.log('error', error)
+    //     setError(error)
+    //   }
+    // }
+    // fetchData()
 
     const fetchData = async () => {
       try {
-        const result = await axios(config)
-        setDetails(result.data.items)
+        const result = await YoutubeChannelDetails()
+        setDetails(result)
       } catch (error) {
         console.log('error', error)
         setError(error)
