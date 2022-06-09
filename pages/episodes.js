@@ -5,11 +5,13 @@ import Card from '@/components/Card'
 import { PageSEO } from '@/components/SEO'
 import YoutubeChannelDetails from '@/lib/youtubeChannelDetails'
 import ApiClient from '@/lib/apiClient'
+import AudioSocials from '@/components/AudioSocials'
 
 export default function Episodes() {
   const [error, setError] = useState(null)
   const [details, setDetails] = useState()
   const [latestVideo, setLatestVideo] = useState()
+  const [latestVideoDescription, setLatestVideoDescription] = useState()
 
   useEffect(() => {
     const fetchVideosList = async () => {
@@ -29,6 +31,7 @@ export default function Episodes() {
           'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=K9PQ6IoMXpA&key='
         )
         setLatestVideo(result)
+        setLatestVideoDescription(result[0].snippet.description)
       } catch (error) {
         console.log('error', error)
       }
@@ -36,11 +39,19 @@ export default function Episodes() {
     fetchLatestVideo()
   }, [])
 
+  // get description from latest video
+  // should only contain relevant information about the episode
+  function getDescription(str) {
+    const descriptionArr = str.split('\n').filter((item) => item)
+    let index = descriptionArr.findIndex((v) => v.includes('Welcome back to On Your Mental')) + 1
+    return descriptionArr[index]
+  }
+
   if (!details) {
     return <h1>Loading...</h1>
   }
-  console.log(details)
-  console.log(latestVideo)
+
+  const description = getDescription(latestVideoDescription)
 
   return (
     <>
@@ -62,6 +73,11 @@ export default function Episodes() {
             title="Embedded youtube"
           />
         </div>
+        <p className="prose max-w-none pb-4 pt-4 text-xl leading-7 text-gray-100">
+          {description}
+
+          <AudioSocials />
+        </p>
         <div className="container py-12">
           <h3 className="flex pb-6 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl">
             Previous Episodes
