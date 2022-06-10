@@ -1,11 +1,8 @@
-// get rss episodes from URL
-// converts xml to json
-
 import { useState, useEffect } from 'react'
 import Parser from 'rss-parser'
 import ReactAudioPlayer from 'react-audio-player'
 
-export default function RssEpisodes() {
+export default function EpisodeList() {
   const parser = new Parser()
   const [rssList, setRssList] = useState()
 
@@ -28,18 +25,25 @@ export default function RssEpisodes() {
   }, [])
 
   if (!rssList) {
-    return <h1>Loading RSS Feed...</h1>
+    return <h1>Loading episodes list...</h1>
   }
-  console.log(rssList)
 
   return (
-    <>
-      <ReactAudioPlayer
-        className="audioPlayer"
-        src="https://www.buzzsprout.com/1649641/10738081-some-life-lessons-on-your-mental-podcast.mp3"
-        controls
-        autoplay={false}
-      />
-    </>
+    <div>
+      <div className="flex flex-col">
+        {rssList.episodes.map((episode, i) => (
+          <div key={episode.pubDate} className="border ">
+            <p className="float-right mt-2 mb-2 mr-5">{episode.title}</p>
+
+            <ReactAudioPlayer
+              className="-ml-2 text-sm font-semibold uppercase text-gray-300"
+              src={episode.enclosure.url}
+              controls
+              autoplay={false}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
   )
 }
