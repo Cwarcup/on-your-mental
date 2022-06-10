@@ -3,8 +3,9 @@
 
 import { useState, useEffect } from 'react'
 import Parser from 'rss-parser'
+import ReactAudioPlayer from 'react-audio-player'
 
-export default function App() {
+export default function RssEpisodes() {
   const parser = new Parser()
   const [rssList, setRssList] = useState()
 
@@ -31,5 +32,14 @@ export default function App() {
   }
   console.log(rssList)
 
-  return <div></div>
+  return (
+    <>
+      <ReactAudioPlayer
+        className="audioPlayer"
+        src="https://www.buzzsprout.com/1649641/10738081-some-life-lessons-on-your-mental-podcast.mp3"
+        controls
+        autoplay={false}
+      />
+    </>
+  )
 }

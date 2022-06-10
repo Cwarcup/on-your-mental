@@ -9,7 +9,7 @@ script-src 'self' 'unsafe-eval' 'unsafe-inline' www.googletagmanager.com www.goo
 style-src 'self' 'unsafe-inline' *.googleapis.com cdn.jsdelivr.net;
 frame-src youtube.com www.youtube.com;
 img-src * blob: data:;
-media-src 'none';
+media-src 'self'  *.buzzsprout.com;
 connect-src *;
 font-src 'self' fonts.gstatic.com cdn.jsdelivr.net
 `
