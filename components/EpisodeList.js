@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Parser from 'rss-parser'
 import ReactAudioPlayer from 'react-audio-player'
+import formatDate from '@/lib/utils/formatDate'
 
 export default function EpisodeList() {
   const parser = new Parser()
@@ -30,20 +31,35 @@ export default function EpisodeList() {
 
   return (
     <div>
-      <div className="flex flex-col">
-        {rssList.episodes.map((episode, i) => (
-          <div key={episode.pubDate} className="border ">
-            <p className="float-right mt-2 mb-2 mr-5">{episode.title}</p>
-
-            <ReactAudioPlayer
-              className="-ml-2 text-sm font-semibold uppercase text-gray-300"
-              src={episode.enclosure.url}
-              controls
-              autoplay={false}
-            />
-          </div>
-        ))}
+      <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+        <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          Listen
+        </h1>
       </div>
+      <ul className="divide-y divide-gray-700">
+        {rssList.episodes.map((episode, i) => (
+          <li key={episode.pubDate} className="py-4 ">
+            <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+              <dl>
+                <dt className="sr-only">Published on</dt>
+                <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                  <time dateTime={episode.pubDate}>{formatDate(episode.pubDate)}</time>
+                </dd>
+              </dl>
+              <div className="space-y-3 xl:col-span-3">
+                <h3 className="font-semibold">{episode.title}</h3>
+                <ReactAudioPlayer
+                  id={episode.title}
+                  className=""
+                  src={episode.enclosure.url}
+                  controls
+                  autoplay={false}
+                />
+              </div>
+            </article>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
