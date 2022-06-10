@@ -3,6 +3,7 @@ import Parser from 'rss-parser'
 import ReactAudioPlayer from 'react-audio-player'
 import formatDate from '@/lib/utils/formatDate'
 import Accordion from './Accordion'
+import getDescription from '@/lib/utils/getDescription'
 
 export default function EpisodeList() {
   const parser = new Parser()
@@ -42,6 +43,8 @@ export default function EpisodeList() {
           <Accordion
             key={index}
             title={episode.title}
+            description={episode.content}
+            pubDate={episode.pubDate}
             content={
               <ReactAudioPlayer
                 id={`episode-${index}`}
