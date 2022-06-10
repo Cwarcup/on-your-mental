@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react'
 import Parser from 'rss-parser'
 import ReactAudioPlayer from 'react-audio-player'
 import formatDate from '@/lib/utils/formatDate'
+import Accordion from './Accordion'
 
 export default function EpisodeList() {
   const parser = new Parser()
   const [rssList, setRssList] = useState()
-  const [isActive, setIsActive] = useState(false)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -37,9 +37,26 @@ export default function EpisodeList() {
           Listen
         </h1>
       </div>
-      <ul className="divide-y divide-gray-700">
+      <div className="accordion divide-y divide-gray-700">
+        {rssList.episodes.map((episode, index) => (
+          <Accordion
+            key={index}
+            title={episode.title}
+            content={
+              <ReactAudioPlayer
+                id={`episode-${index}`}
+                className=""
+                src={episode.enclosure.url}
+                controls
+                autoplay={false}
+              />
+            }
+          />
+        ))}
+      </div>
+      {/* <ul className="divide-y divide-gray-700">
         {rssList.episodes.map((episode, i) => (
-          <li key={episode.pubDate} className="py-4 ">
+          <li key={`episode-${i}`} className="py-4 ">
             <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
               <dl>
                 <dt className="sr-only">Published on</dt>
@@ -50,7 +67,7 @@ export default function EpisodeList() {
               <div className="accordion space-y-3 xl:col-span-3">
                 <div className="accordion-item">
                   <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
-                    <h3 className="font-semibold">{episode.title} +</h3>
+                    <h3 className="font-semibold">{episode.title}</h3>
                     <h3 className="font-semibold">{isActive ? '-' : '+'}</h3>
                   </div>
                   {isActive && (
@@ -69,7 +86,7 @@ export default function EpisodeList() {
             </article>
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   )
 }
