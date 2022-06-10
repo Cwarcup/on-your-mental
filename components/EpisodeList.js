@@ -6,6 +6,7 @@ import formatDate from '@/lib/utils/formatDate'
 export default function EpisodeList() {
   const parser = new Parser()
   const [rssList, setRssList] = useState()
+  const [isActive, setIsActive] = useState(false)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,7 +24,7 @@ export default function EpisodeList() {
     }
 
     fetchData()
-  }, [])
+  }, [parser])
 
   if (!rssList) {
     return <h1>Loading episodes list...</h1>
@@ -46,15 +47,24 @@ export default function EpisodeList() {
                   <time dateTime={episode.pubDate}>{formatDate(episode.pubDate)}</time>
                 </dd>
               </dl>
-              <div className="space-y-3 xl:col-span-3">
-                <h3 className="font-semibold">{episode.title}</h3>
-                <ReactAudioPlayer
-                  id={episode.title}
-                  className=""
-                  src={episode.enclosure.url}
-                  controls
-                  autoplay={false}
-                />
+              <div className="accordion space-y-3 xl:col-span-3">
+                <div className="accordion-item">
+                  <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
+                    <h3 className="font-semibold">{episode.title} +</h3>
+                    <h3 className="font-semibold">{isActive ? '-' : '+'}</h3>
+                  </div>
+                  {isActive && (
+                    <div className="accordion-content">
+                      <ReactAudioPlayer
+                        id={`episode-${i}`}
+                        className=""
+                        src={episode.enclosure.url}
+                        controls
+                        autoplay={false}
+                      />
+                    </div>
+                  )}
+                </div>
               </div>
             </article>
           </li>

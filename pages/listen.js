@@ -13,7 +13,6 @@ export async function getStaticProps() {
 }
 
 export default function Tags({ tags }) {
-  const sortedTags = Object.keys(tags).sort((a, b) => tags[b] - tags[a])
   return (
     <>
       <EpisodeList />
