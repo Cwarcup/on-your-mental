@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react'
 import Parser from 'rss-parser'
 import ReactAudioPlayer from 'react-audio-player'
-import formatDate from '@/lib/utils/formatDate'
+
 import Accordion from './Accordion'
-import getDescription from '@/lib/utils/getDescription'
 
 export default function EpisodeList() {
   const parser = new Parser()
   const [rssList, setRssList] = useState()
 
+  // initial load to fetch data
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -25,7 +25,7 @@ export default function EpisodeList() {
     }
 
     fetchData()
-  }, [parser])
+  }, [])
 
   if (!rssList) {
     return <h1>Loading episodes list...</h1>
