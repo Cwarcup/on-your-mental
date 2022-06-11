@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import getDescription from '@/lib/utils/getDescription'
 import formatDate from '@/lib/utils/formatDate'
 
 const Accordion = ({ title, content, description, pubDate }) => {
@@ -21,16 +20,14 @@ const Accordion = ({ title, content, description, pubDate }) => {
       <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
         <time dateTime={pubDate}>{formatDate(pubDate)}</time>
       </dd>
-      <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
-        <h3 className="text-xl font-bold">{title}</h3>
-        <div className="pt-2"> {isActive ? 'Close' : 'Expand'}</div>
-      </div>
-      {isActive && (
-        <div className="accordion-content pt-4">
+      <h3 className="text-xl font-bold">{title}</h3>
+      <details className="accordion-title ">
+        <summary className="ml-6 pt-2 pb-2 text-xl font-bold">Listen</summary>
+        <div className="accordion-content transform pt-4 duration-300 ease-in-out">
           {content}
           <p className="ml-8 mr-8 pt-4 text-gray-200">{formattedDec}</p>
         </div>
-      )}
+      </details>
     </div>
   )
 }

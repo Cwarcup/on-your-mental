@@ -48,7 +48,7 @@ export default function EpisodeList() {
             content={
               <ReactAudioPlayer
                 id={`episode-${index}`}
-                className=""
+                className="m-auto"
                 src={episode.enclosure.url}
                 controls
                 autoplay={false}
