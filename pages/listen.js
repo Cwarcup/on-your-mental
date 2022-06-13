@@ -5,6 +5,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { getAllTags } from '@/lib/tags'
 import kebabCase from '@/lib/utils/kebabCase'
 import EpisodeList from '@/components/EpisodeList'
+import LatestVideo from '@/components/latestVideo'
 
 export async function getStaticProps() {
   const tags = await getAllTags('blog')
