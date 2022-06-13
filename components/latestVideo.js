@@ -48,7 +48,12 @@ const LatestVideo = () => {
       <p className="prose m-4 max-w-none pb-4 text-lg leading-7 text-gray-400">
         {episodeDescription}
       </p>
-      <AudioSocials />
+      <AudioSocials
+        applePodcastLink={
+          'https://stackoverflow.com/questions/55622768/uncaught-invariant-violation-rendered-more-hooks-than-during-the-previous-rende'
+        }
+        youtubeLink={`https://www.youtube.com/watch?v=${videoId}`}
+      />
     </>
   )
 }
