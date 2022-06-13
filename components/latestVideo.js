@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import YoutubeEmbed from './YoutubeEmbed'
 import YTVideoIdDetails from '../lib/YTVideoIdDetails'
+import getDescription from '../lib/utils/getDescription'
+import AudioSocials from '@/components/AudioSocials'
 
 const LatestVideo = () => {
   const [episodeTitle, setEpisodeTitle] = useState()
@@ -36,19 +38,17 @@ const LatestVideo = () => {
   let videoId = data[0].id.videoId
   const details = YTVideoIdDetails(videoId).then((result) => {
     setEpisodeTitle(result.data.items[0].snippet.title)
-    setEpisodeDescription(result.data.items[0].snippet.description)
+    setEpisodeDescription(getDescription(result.data.items[0].snippet.description))
   })
-  console.log(episodeDescription)
 
   return (
     <>
       <YoutubeEmbed embedId={videoId} />
 
-      <div className="prose max-w-none pb-4 pt-4 text-xl leading-7 text-gray-100">
-        <p className=" prose max-w-none pb-4 text-lg leading-7 text-gray-400">
-          {episodeDescription}
-        </p>
-      </div>
+      <p className="prose m-4 max-w-none pb-4 text-lg leading-7 text-gray-400">
+        {episodeDescription}
+      </p>
+      <AudioSocials />
     </>
   )
 }

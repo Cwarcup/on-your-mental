@@ -3,7 +3,6 @@ import siteMetadata from '@/data/siteMetadata'
 import Link from 'next/link'
 import PageTitle from './PageTitle'
 import ApiClient from '@/lib/apiClient'
-import AudioSocials from '@/components/AudioSocials'
 import LatestVideo from './latestVideo'
 
 export default function Hero() {
@@ -45,10 +44,6 @@ export default function Hero() {
           Latest Episode
         </h3>
         <LatestVideo />
-      </div>
-      <div className="prose max-w-none pb-4 pt-4 text-xl leading-7 text-gray-100">
-        <p className=" prose max-w-none pb-4 text-lg leading-7 text-gray-400">test</p>
-        <AudioSocials />
       </div>
     </div>
   )
