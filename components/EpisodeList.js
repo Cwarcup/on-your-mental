@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Parser from 'rss-parser'
 import ReactAudioPlayer from 'react-audio-player'
-
+import AudioSocials from '@/components/AudioSocials'
 import Accordion from './Accordion'
 
 export default function EpisodeList() {
@@ -39,6 +39,7 @@ export default function EpisodeList() {
         </h1>
       </div>
       <div className="accordion divide-y divide-gray-700">
+        <AudioSocials />
         {rssList.episodes.map((episode, index) => (
           <Accordion
             key={index}
