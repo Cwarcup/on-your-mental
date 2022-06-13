@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import YTVideoIdDetails from '@/lib/YTVideoIdDetails'
 
 // used to fetch details of ONE specific video using the videoId
 
@@ -8,22 +9,11 @@ const YoutubeDetails = ({ videoId }) => {
   const [details, setDetails] = useState()
 
   useEffect(() => {
-    var config = {
-      method: 'get',
-      url: `https://www.googleapis.com/youtube/v3/videos?id=${videoId}&key=${process.env.NEXT_PUBLIC_YOUTUBE_API_KEY}&fields=items(id,snippet(channelId,title,categoryId,description,thumbnails),statistics)&part=snippet,statistics`,
-      headers: {},
+    try {
+      setDetails(YTVideoIdDetails(videoId).data)
+    } catch (error) {
+      setError(error)
     }
-
-    const fetchData = async () => {
-      try {
-        const result = await axios(config)
-        setDetails(result.data.items[0].snippet)
-      } catch (error) {
-        console.log('error', error)
-        setError(error)
-      }
-    }
-    fetchData()
   }, [videoId])
 
   if (!details) {
@@ -32,12 +22,18 @@ const YoutubeDetails = ({ videoId }) => {
   console.log(details)
   return (
     <div>
-      {details.description
+      test
+      {/* {details.description
         .replace(/___________________________________________________________________________/g, '')
         .split('\n')
         .map((item, index) => {
-          return <p key={index}>{item}</p>
-        })}
+          return (
+            <>
+              {' '}
+              key={index}>{item}
+            </>
+          )
+        })} */}
     </div>
   )
 }
