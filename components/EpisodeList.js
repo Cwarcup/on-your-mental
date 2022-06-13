@@ -16,7 +16,6 @@ export default function EpisodeList() {
         setRssList({
           episodes: feed.items,
           program_title: feed.title,
-          program_image: feed.image.url,
           program_description: feed.description,
         })
       } catch (error) {
@@ -30,9 +29,10 @@ export default function EpisodeList() {
   if (!rssList) {
     return <h1>Loading episodes list...</h1>
   }
+  console.log('rssList', rssList)
 
   return (
-    <div>
+    <>
       <div className="space-y-2 pt-6 pb-8 md:space-y-5">
         <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
           Listen
@@ -55,42 +55,10 @@ export default function EpisodeList() {
                 autoplay={false}
               />
             }
+            guidNumber={episode.guid}
           />
         ))}
       </div>
-      {/* <ul className="divide-y divide-gray-700">
-        {rssList.episodes.map((episode, i) => (
-          <li key={`episode-${i}`} className="py-4 ">
-            <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-              <dl>
-                <dt className="sr-only">Published on</dt>
-                <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                  <time dateTime={episode.pubDate}>{formatDate(episode.pubDate)}</time>
-                </dd>
-              </dl>
-              <div className="accordion space-y-3 xl:col-span-3">
-                <div className="accordion-item">
-                  <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
-                    <h3 className="font-semibold">{episode.title}</h3>
-                    <h3 className="font-semibold">{isActive ? '-' : '+'}</h3>
-                  </div>
-                  {isActive && (
-                    <div className="accordion-content">
-                      <ReactAudioPlayer
-                        id={`episode-${i}`}
-                        className=""
-                        src={episode.enclosure.url}
-                        controls
-                        autoplay={false}
-                      />
-                    </div>
-                  )}
-                </div>
-              </div>
-            </article>
-          </li>
-        ))}
-      </ul> */}
-    </div>
+    </>
   )
 }
