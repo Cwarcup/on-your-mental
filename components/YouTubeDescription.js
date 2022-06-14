@@ -23,14 +23,20 @@ const YoutubeDescription = ({ videoId }) => {
     getDescription(videoId)
   }, [])
 
-  if (!data) {
+  if (!data || !fullDescription) {
     return <h1>Loading...</h1>
   }
 
   console.log(fullDescription)
   console.log(data)
 
-  return <div>full return</div>
+  return (
+    <div className="mt-3">
+      {fullDescription.split('\n').map((item, index) => {
+        return <p key={index}>{item}</p>
+      })}
+    </div>
+  )
 }
 
 export default YoutubeDescription
