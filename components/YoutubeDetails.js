@@ -1,25 +1,27 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import YTVideoIdDetails from '@/lib/YTVideoIdDetails'
+import YTVideoIdDetails from '../lib/YTVideoIdDetails'
+import getDescription from '../lib/utils/getDescription'
 
 // used to fetch details of ONE specific video using the videoId
-
 const YoutubeDetails = ({ videoId }) => {
-  const [error, setError] = useState(null)
   const [details, setDetails] = useState()
+  const [episodeDescription, setEpisodeDescription] = useState()
+  const [error, setError] = useState(null)
 
+  // const details = YTVideoIdDetails(videoId).then((result) => {
+  //   setEpisodeDescription(getDescription(result.data.items[0].snippet.description))
+  // })
   useEffect(() => {
-    try {
-      setDetails(YTVideoIdDetails(videoId).data)
-    } catch (error) {
-      setError(error)
-    }
+    YTVideoIdDetails(videoId).then((result) => {
+      setDetails(result.items[0])
+    })
   }, [videoId])
 
   if (!details) {
     return <h1>Loading...</h1>
   }
-  console.log(details)
+
+  console.log('details', details)
   return (
     <div>
       test

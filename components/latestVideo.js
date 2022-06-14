@@ -35,6 +35,7 @@ const LatestVideo = () => {
     return <h1>Loading...</h1>
   }
 
+  // use the videoId to fetch the details of the video
   let videoId = data[0].id.videoId
   const details = YTVideoIdDetails(videoId).then((result) => {
     setEpisodeTitle(result.data.items[0].snippet.title)
