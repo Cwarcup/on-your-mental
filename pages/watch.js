@@ -25,13 +25,23 @@ export default function Episodes() {
     }
     fetchVideosList()
 
+    // get description from latest video
+    // should only contain relevant information about the episode
+    function getDescription(str) {
+      const descriptionArr = str.split('\n').filter((item) => item)
+      let index = descriptionArr.findIndex((v) => v.includes('Welcome back to On Your Mental')) + 1
+      return descriptionArr[index]
+    }
+
     const fetchLatestVideo = async () => {
       try {
         const result = await ApiClient(
           'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=K9PQ6IoMXpA&key='
         )
         setLatestVideo(result)
-        setLatestVideoDescription(result[0].snippet.description)
+        const description = await result
+        const formattedDesc = getDescription(description[0].snippet.description)
+        setLatestVideoDescription(formattedDesc)
       } catch (error) {
         console.log('error', error)
       }
@@ -39,19 +49,11 @@ export default function Episodes() {
     fetchLatestVideo()
   }, [])
 
-  // get description from latest video
-  // should only contain relevant information about the episode
-  function getDescription(str) {
-    const descriptionArr = str.split('\n').filter((item) => item)
-    let index = descriptionArr.findIndex((v) => v.includes('Welcome back to On Your Mental')) + 1
-    return descriptionArr[index]
-  }
-
-  if (!details) {
+  if (!details || !latestVideo) {
     return <h1>Loading...</h1>
   }
 
-  const description = getDescription(latestVideoDescription)
+  // const description = getDescription(latestVideoDescription)
 
   return (
     <>
@@ -74,7 +76,7 @@ export default function Episodes() {
           />
         </div>
         <div className="prose max-w-none pb-4 pt-4 text-xl leading-7 text-gray-100">
-          <p>{description}</p>
+          <p>{latestVideoDescription}</p>
 
           <AudioSocials />
         </div>

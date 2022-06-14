@@ -7,7 +7,6 @@ import TOCInline from './TOCInline'
 import YoutubeEmbed from './YoutubeEmbed'
 import AudioSocials from './AudioSocials'
 import Pre from './Pre'
-import { BlogNewsletterForm } from './NewsletterForm'
 import YoutubeDetails from './YoutubeDetails'
 import YtVideosList from './YtVideosList'
 import YoutubeDescription from './YoutubeDescription'
@@ -22,7 +21,6 @@ export const MDXComponents = {
   TOCInline,
   a: CustomLink,
   pre: Pre,
-  BlogNewsletterForm: BlogNewsletterForm,
   wrapper: ({ components, layout, ...rest }) => {
     const Layout = require(`../layouts/${layout}`).default
     return <Layout {...rest} />
