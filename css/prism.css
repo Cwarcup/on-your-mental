@@ -483,21 +483,3 @@ pre > code.diff-highlight .token.token.inserted:not(.prefix) *::selection {
 .prism-previewer-easing.prism-previewer-easing circle {
   fill: transparent;
 }
-
-/* .homepageStyle {
-  box-sizing: border-box,
-  display: block,
-  overflow: hidden,
-  width: initial,
-  height: initial,
-  background: none,
-  opacity: 1,
-  border: 0,
-  margin: 0,
-  padding: 0,
-  position: absolute,
-  top: 0,
-  left: 0,
-  bottom: 0,
-  right: 0
-} */
