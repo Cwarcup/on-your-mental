@@ -19,6 +19,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts }) {
+  console.log('posts', posts)
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
@@ -68,7 +69,7 @@ export default function Home({ posts }) {
                           className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                           aria-label={`Read "${title}"`}
                         >
-                          Read more &rarr;
+                          Watch the episode &rarr;
                         </Link>
                       </div>
                     </div>
