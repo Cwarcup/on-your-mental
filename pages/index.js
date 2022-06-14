@@ -9,7 +9,7 @@ import Hero from '@/components/Hero'
 
 import Footer from '@/components/Footer'
 
-const MAX_DISPLAY = 5
+const MAX_DISPLAY = 6
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
