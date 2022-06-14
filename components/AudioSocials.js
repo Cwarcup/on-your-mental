@@ -10,7 +10,7 @@ export default function AudioSocials({
     <>
       <div className="mt-5 mb-5 flex flex-col items-center">
         <div className="mb-3 flex gap-3 space-x-4">
-          <SocialIcon kind="spotify" href={spotifyLink} />
+          <SocialIcon kind="spotify" href={spotifyLink} hoverColor="text-green-600" />
           <SocialIcon kind="applePodcasts" href={applePodcastLink} />
           <SocialIcon kind="youtube" href={youtubeLink} />
         </div>
