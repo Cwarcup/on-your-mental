@@ -7,7 +7,6 @@ import formatDate from '@/lib/utils/formatDate'
 import Image from '@/components/Image'
 import Hero from '@/components/Hero'
 
-import NewsletterForm from '@/components/NewsletterForm'
 import Footer from '@/components/Footer'
 
 const MAX_DISPLAY = 5
@@ -19,30 +18,13 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts }) {
-  // const someStyle = {
-  //   box-sizing: "border-box",
-  //   display: "block",
-  //   overflow: "hidden",
-  //   width: "initial",
-  //   height: "initial",
-  //   background: "none",
-  //   opacity: "1",
-  //   border: "0",
-  //   margin: "0",
-  //   padding: "0",
-  //   position: "absolute",
-  //   top: "0",
-  //   left: "0",
-  //   bottom: "0",
-  //   right: "0"
-  // };
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <Hero />
       <div className="container mx-auto">
         <div className="my-4 flex flex-col">
-          <span className="font-poppins title-font text-3xl font-bold">Recent Posts</span>
+          <span className="font-poppins title-font text-3xl font-bold">Previous Posts</span>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
           {!posts.length && 'No posts found.'}
@@ -53,12 +35,12 @@ export default function Home({ posts }) {
                 key={slug}
                 className="group bg-day dark:bg-night w-full bg-opacity-50 dark:bg-opacity-50"
               >
-                <a className="c-card block transform overflow-hidden rounded-lg bg-transparent transition duration-500 group-hover:scale-105">
+                <div className="c-card block transform overflow-hidden rounded-lg bg-transparent transition duration-500 group-hover:scale-105">
                   <div className="relative max-h-4 overflow-hidden rounded-lg pb-60">
                     <span>
                       <img
                         alt={title}
-                        src={images[0]}
+                        src={images}
                         className="absolute inset-0 h-full w-full  object-cover "
                       />
                     </span>
@@ -81,7 +63,7 @@ export default function Home({ posts }) {
                       {summary}
                     </p>
                   </div>
-                </a>
+                </div>
               </div>
             )
           })}
