@@ -38,7 +38,7 @@ const genFrontMatter = (answers) => {
   tags: [${answers.tags ? tags : ''}]
   draft: ${answers.draft === 'yes' ? true : false}
   summary: ${answers.summary ? answers.summary : ' '}
-  images: []
+  images: https://i.ytimg.com/vi/${answers.youtubeURL}/default.jpg
   layout: ${answers.layout}
   canonicalUrl: ${answers.canonicalUrl}
   youtubeURL: ${answers.youtubeURL}
