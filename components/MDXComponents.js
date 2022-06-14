@@ -10,8 +10,10 @@ import Pre from './Pre'
 import { BlogNewsletterForm } from './NewsletterForm'
 import YoutubeDetails from './YoutubeDetails'
 import YtVideosList from './YtVideosList'
+import YoutubeDescription from './YoutubeDescription'
 
 export const MDXComponents = {
+  YoutubeDescription,
   YtVideosList,
   YoutubeDetails,
   AudioSocials,
