@@ -2,26 +2,11 @@ import React, { useEffect, useState } from 'react'
 import siteMetadata from '@/data/siteMetadata'
 import Link from 'next/link'
 import PageTitle from './PageTitle'
-import ApiClient from '@/lib/apiClient'
 import LatestVideo from './latestVideo'
 
 export default function Hero() {
   const [latestVideo, setLatestVideo] = useState()
   const [latestVideoDescription, setLatestVideoDescription] = useState()
-
-  // useEffect(() => {
-  //   const fetchLatestVideo = async () => {
-  //     try {
-  //       const result = await ApiClient(
-  //         'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=K9PQ6IoMXpA&key='
-  //       )
-  //       setLatestVideoDescription(result[0].snippet.description)
-  //     } catch (error) {
-  //       console.log('error', error)
-  //     }
-  //   }
-  //   fetchLatestVideo()
-  // }, [])
 
   //getDescription
   function getDescription(str) {

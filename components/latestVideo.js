@@ -38,13 +38,14 @@ const LatestVideo = () => {
   // use the videoId to fetch the details of the video
   let videoId = data[0].id.videoId
   const details = YTVideoIdDetails(videoId).then((result) => {
-    setEpisodeTitle(result.data.items[0].snippet.title)
-    setEpisodeDescription(getDescription(result.data.items[0].snippet.description))
+    setEpisodeTitle(result.items[0].snippet.title)
+    setEpisodeDescription(getDescription(result.items[0].snippet.description))
   })
 
   return (
     <>
       <YoutubeEmbed embedId={videoId} />
+      <div className="text-xl font-bold text-gray-100">{episodeTitle}</div>
 
       <p className="prose m-4 max-w-none pb-4 text-lg leading-7 text-gray-400">
         {episodeDescription}
