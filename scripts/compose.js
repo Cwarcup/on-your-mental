@@ -51,10 +51,9 @@ const genFrontMatter = (answers) => {
   frontMatter =
     frontMatter +
     `\n---
-    <YoutubeEmbed embedId="${answers.youtubeURL}" />
-    <AudioSocials />
-    <YoutubeDetails videoId="${answers.youtubeURL}" />
-    `
+<YoutubeEmbed embedId="${answers.youtubeURL}" />
+<AudioSocials />
+`
 
   return frontMatter
 }
