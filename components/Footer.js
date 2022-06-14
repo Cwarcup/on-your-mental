@@ -7,10 +7,26 @@ export default function Footer() {
     <footer>
       <div className="mt-16 flex flex-col items-center">
         <div className="mb-3 flex space-x-4">
-          <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} />
-          <SocialIcon kind="youtube" href={siteMetadata.youtube} />
-          <SocialIcon kind="tiktok" href={siteMetadata.tiktok} />
-          <SocialIcon kind="instagram" href={siteMetadata.instagram} />
+          <SocialIcon
+            kind="mail"
+            href={`mailto:${siteMetadata.email}`}
+            hoverColor="dark:hover:text-primary-700"
+          />
+          <SocialIcon
+            kind="youtube"
+            href={siteMetadata.youtube}
+            hoverColor="dark:hover:text-youtubeRed"
+          />
+          <SocialIcon
+            kind="tiktok"
+            href={siteMetadata.tiktok}
+            hoverColor="dark:hover:text-blue-500"
+          />
+          <SocialIcon
+            kind="instagram"
+            href={siteMetadata.instagram}
+            hoverColor="dark:hover:text-purple-700"
+          />
         </div>
         <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
           <div>{siteMetadata.author}</div>

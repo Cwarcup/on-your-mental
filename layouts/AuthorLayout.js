@@ -28,10 +28,18 @@ export default function AuthorLayout({ children, frontMatter }) {
             <div className="text-gray-500 dark:text-gray-400">{occupation}</div>
             <div className="text-gray-500 dark:text-gray-400">{company}</div>
             <div className="flex space-x-3 pt-6">
-              <SocialIcon kind="mail" href={`mailto:${email}`} />
-              <SocialIcon kind="youtube" href={youtube} />
-              <SocialIcon kind="instagram" href={instagram} />
-              <SocialIcon kind="tiktok" href={tiktok} />
+              <SocialIcon
+                kind="mail"
+                href={`mailto:${email}`}
+                hoverColor="dark:hover:text-primary-700"
+              />
+              <SocialIcon kind="youtube" href={youtube} hoverColor="dark:hover:text-youtubeRed" />
+              <SocialIcon
+                kind="instagram"
+                href={instagram}
+                hoverColor="dark:hover:text-purple-700"
+              />
+              <SocialIcon kind="tiktok" href={tiktok} hoverColor="dark:hover:text-blue-500" />
             </div>
           </div>
           <div className="prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2">{children}</div>
