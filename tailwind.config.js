@@ -38,6 +38,9 @@ module.exports = {
         gray: colors.neutral,
         ORMblue: '#05324e',
         ORMend: '#375b71',
+        spotifyGreen: '#1DB954',
+        applePodcastsPurple: '#6f42c1',
+        youtubeRed: '#ff0000',
       },
       typography: (theme) => ({
         DEFAULT: {
