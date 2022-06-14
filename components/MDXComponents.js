@@ -7,14 +7,12 @@ import TOCInline from './TOCInline'
 import YoutubeEmbed from './YoutubeEmbed'
 import AudioSocials from './AudioSocials'
 import Pre from './Pre'
-import YoutubeDetails from './YoutubeDetails'
 import YtVideosList from './YtVideosList'
 import YoutubeDescription from './YoutubeDescription'
 
 export const MDXComponents = {
   YoutubeDescription,
   YtVideosList,
-  YoutubeDetails,
   AudioSocials,
   YoutubeEmbed,
   Image,

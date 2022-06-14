@@ -4,10 +4,7 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
-import Image from '@/components/Image'
 import Hero from '@/components/Hero'
-
-import Footer from '@/components/Footer'
 
 const MAX_DISPLAY = 6
 
@@ -55,13 +52,11 @@ export default function Home({ posts }) {
                       <time dateTime={date}>{formatDate(date)}</time>
                     </span>
                     <h2 className="mt-2 mb-2 font-bold md:text-xl">
-                      <Link href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">
+                      <Link href={`/blog/${slug}`} className="dark:text-gray-100">
                         {title}
                       </Link>
                     </h2>
-                    <p className="text-sm tracking-wider text-gray-600 dark:text-gray-300">
-                      {summary}
-                    </p>
+                    <p className="text-sm tracking-wider dark:text-gray-300">{summary}</p>
                   </div>
                 </div>
               </div>
@@ -73,7 +68,7 @@ export default function Home({ posts }) {
           <div className="flex justify-end text-base font-medium leading-6">
             <Link
               href="/posts"
-              className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+              className="text-primary-500 dark:hover:text-primary-400"
               aria-label="all posts"
             >
               All Posts &rarr;

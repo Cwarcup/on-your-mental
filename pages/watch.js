@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import siteMetadata from '@/data/siteMetadata'
-import projectsData from '@/data/projectsData'
 import Card from '@/components/Card'
 import { PageSEO } from '@/components/SEO'
 import YoutubeChannelDetails from '@/lib/youtubeChannelDetails'
@@ -8,7 +7,6 @@ import ApiClient from '@/lib/apiClient'
 import AudioSocials from '@/components/AudioSocials'
 
 export default function Episodes() {
-  const [error, setError] = useState(null)
   const [details, setDetails] = useState()
   const [latestVideo, setLatestVideo] = useState()
   const [latestVideoDescription, setLatestVideoDescription] = useState()
@@ -20,7 +18,6 @@ export default function Episodes() {
         setDetails(result)
       } catch (error) {
         console.log('error', error)
-        setError(error)
       }
     }
     fetchVideosList()
@@ -53,12 +50,10 @@ export default function Episodes() {
     return <h1>Loading...</h1>
   }
 
-  // const description = getDescription(latestVideoDescription)
-
   return (
     <>
       <PageSEO title={`Projects - ${siteMetadata.author}`} description={siteMetadata.description} />
-      <div className="flex flex-col divide-y divide-gray-200 dark:divide-gray-700 sm:content-center">
+      <div className="flex flex-col divide-y divide-gray-700 sm:content-center">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Latest Episode
@@ -81,7 +76,7 @@ export default function Episodes() {
           <AudioSocials />
         </div>
         <div className="container py-12 ">
-          <h3 className="flex pb-6 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl">
+          <h3 className="flex pb-6 text-2xl font-extrabold tracking-tight text-gray-100 sm:text-3xl md:text-5xl">
             Previous Episodes
           </h3>
           <div className=" flex flex-wrap sm:justify-center">

@@ -21,7 +21,7 @@ const YoutubeDescription = ({ videoId }) => {
 
   useEffect(() => {
     getDescription(videoId)
-  }, [])
+  }, [videoId])
 
   if (!data || !fullDescription) {
     return <h1>Loading...</h1>
