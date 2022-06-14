@@ -1,5 +1,8 @@
 ![tailwind-nextjs-banner](/public/static/images/twitter-card.png)
 
+Compose
+Run `node ./scripts/compose.jsnode ./scripts/compose.js` to bootstrap a new post.
+
 # Tailwind Nextjs Starter Blog
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/timlrx/tailwind-nextjs-starter-blog?style=social)](https://GitHub.com/timlrx/tailwind-nextjs-starter-blog/stargazers/)
