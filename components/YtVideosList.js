@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import Loader from '@/components/Loader'
 
 const VideosList = () => {
   const [error, setError] = useState(null)
@@ -25,7 +26,7 @@ const VideosList = () => {
   }, [])
 
   if (!details) {
-    return <h1>Loading...</h1>
+    return <Loader />
   }
   console.log(details)
   return <div></div>

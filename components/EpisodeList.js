@@ -3,6 +3,7 @@ import Parser from 'rss-parser'
 import ReactAudioPlayer from 'react-audio-player'
 import AudioSocials from '@/components/AudioSocials'
 import Accordion from './Accordion'
+import Loader from '@/components/Loader'
 
 export default function EpisodeList() {
   const parser = new Parser()
@@ -27,7 +28,7 @@ export default function EpisodeList() {
   }, [])
 
   if (!rssList) {
-    return <h1>Loading episodes list...</h1>
+    return <Loader />
   }
   console.log('rssList', rssList)
 

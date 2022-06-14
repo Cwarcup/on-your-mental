@@ -5,6 +5,7 @@ import { PageSEO } from '@/components/SEO'
 import YoutubeChannelDetails from '@/lib/youtubeChannelDetails'
 import ApiClient from '@/lib/apiClient'
 import AudioSocials from '@/components/AudioSocials'
+import Loader from '@/components/Loader'
 
 export default function Episodes() {
   const [details, setDetails] = useState()
@@ -47,7 +48,7 @@ export default function Episodes() {
   }, [])
 
   if (!details || !latestVideo) {
-    return <h1>Loading...</h1>
+    return <Loader />
   }
 
   return (

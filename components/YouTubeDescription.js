@@ -1,5 +1,6 @@
 import react, { useEffect, useState } from 'react'
 import axios from 'axios'
+import Loader from '@/components/Loader'
 
 const YoutubeDescription = ({ videoId }) => {
   const [data, setData] = useState()
@@ -24,7 +25,7 @@ const YoutubeDescription = ({ videoId }) => {
   }, [videoId])
 
   if (!data || !fullDescription) {
-    return <h1>Loading...</h1>
+    return <Loader />
   }
 
   console.log(fullDescription)

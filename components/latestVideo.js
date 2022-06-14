@@ -4,6 +4,7 @@ import YoutubeEmbed from './YoutubeEmbed'
 import YTVideoIdDetails from '../lib/YTVideoIdDetails'
 import getDescription from '../lib/utils/getDescription'
 import AudioSocials from '@/components/AudioSocials'
+import Loader from '@/components/Loader'
 
 const LatestVideo = () => {
   const [episodeTitle, setEpisodeTitle] = useState()
@@ -32,7 +33,7 @@ const LatestVideo = () => {
   }, [])
 
   if (!data) {
-    return <h1>Loading...</h1>
+    return <Loader />
   }
 
   // use the videoId to fetch the details of the video
