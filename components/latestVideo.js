@@ -52,9 +52,7 @@ const LatestVideo = () => {
         {episodeDescription}
       </p>
       <AudioSocials
-        applePodcastLink={
-          'https://stackoverflow.com/questions/55622768/uncaught-invariant-violation-rendered-more-hooks-than-during-the-previous-rende'
-        }
+        applePodcastLink={'https://podcasts.apple.com/ca/podcast/on-your-mental/id1551290550'}
         youtubeLink={`https://www.youtube.com/watch?v=${videoId}`}
       />
     </>

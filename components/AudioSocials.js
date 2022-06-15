@@ -2,7 +2,7 @@ import SocialIcon from '@/components/social-icons'
 import siteMetadata from '@/data/siteMetadata'
 
 export default function AudioSocials({
-  applePodcastLink = 'https://podcasts.apple.com/ca/podcast/on-your-mental/',
+  applePodcastLink = 'https://podcasts.apple.com/ca/podcast/on-your-mental/id1551290550',
   spotifyLink = 'https://open.spotify.com/show/5aJjICGnbefw0hxx8qW0hm',
   youtubeLink = 'https://www.youtube.com/channel/UCYZNw4kprBNpxBrTcnNl_Kw',
   green = 'dark:hover:text-spotifyGreen',
