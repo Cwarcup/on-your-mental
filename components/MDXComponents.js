@@ -8,7 +8,7 @@ import YoutubeEmbed from './YoutubeEmbed'
 import AudioSocials from './AudioSocials'
 import Pre from './Pre'
 import YtVideosList from './YtVideosList'
-import YoutubeDescription from './YoutubeDescription'
+import YoutubeDescription from './YouTubeDescription'
 
 export const MDXComponents = {
   YoutubeDescription,
