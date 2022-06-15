@@ -1,4 +1,4 @@
-import react, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Loader from '@/components/Loader'
 
@@ -27,9 +27,6 @@ const YoutubeDescription = ({ videoId }) => {
   if (!data || !fullDescription) {
     return <Loader />
   }
-
-  console.log(fullDescription)
-  console.log(data)
 
   return (
     <div className="mt-3">

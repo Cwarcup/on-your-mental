@@ -1,4 +1,32 @@
-![tailwind-nextjs-banner](/public/static/images/twitter-card.png)
+# On Your Mental Blog
+
+Forked from the incredible [Tailwind-Nextjs-Starter-Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog) by [Tim Lrx](https://github.com/timlrx).
+
+Check out the starter documentation or fork this project and start building your own blog!
+
+# Examples
+
+![Homepage](https://media1.giphy.com/media/WwSz4HMCsMNr5fztkl/giphy.gif?cid=790b761154c2b76c355b64fee4049e571e603a50eb9736f4&rid=giphy.gif&ct=g)
+
+![Watch Listen Example](https://media2.giphy.com/media/GDcl1GaVOwCr6HSylm/giphy.gif?cid=790b761138b639134d272fb72eb45706cc704c9a51021997&rid=giphy.gif&ct=g)
+
+# Motivation
+
+I was inspired by the [Tailwind-Nextjs-Starter-Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog) and decided to fork it to build my own blog. While working on my own personal blog, I remembered my good friend, [Reuben Hardern](https://www.instagram.com/reubenhardern/?hl=en) was starting his own podcast. I offered to build him a small website to get his podcast started.
+
+As a 8-month, self-taught developer, I thought this would be a great introduction to Next.js and Tailwind.
+
+I took inspiration from the other blogs linked in the README.md of the [Tailwind-Nextjs-Starter-Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog) to help me with design principles and styling.
+
+# Features
+
+## Youtube Integration
+
+`YoutubeEmbed` components is a simple way of embedding a YouTube video into a page. It accepts a YouTube video ID and renders the video.
+
+`YoutubeDescription` component returns the description of a YouTube video in a `<p>` tag. The google API returns a string containing multiple `\n` characters, which renders in a strange way. This component splits on the `\n` characters and maps over each item, returning the item in a `<p>` tag.
+
+`YTVideosList` returns a list of 10 YouTube videos sorted by date. It accepts a YouTube channel ID and fetches the videos from the API.
 
 Composec
 Run `node ./scripts/compose.js` to bootstrap a new post.
