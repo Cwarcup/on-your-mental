@@ -20,12 +20,12 @@ export default function Footer() {
           <SocialIcon
             kind="tiktok"
             href={siteMetadata.tiktok}
-            hoverColor="dark:hover:text-blue-500"
+            hoverColor="dark:hover:text-tiktokColor"
           />
           <SocialIcon
             kind="instagram"
             href={siteMetadata.instagram}
-            hoverColor="dark:hover:text-purple-700"
+            hoverColor="dark:hover:text-instagramColor"
           />
         </div>
         <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">

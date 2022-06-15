@@ -6,6 +6,8 @@ export default function AuthorLayout({ children, frontMatter }) {
   const { name, avatar, occupation, company, email, instagram, youtube, github, tiktok } =
     frontMatter
 
+  const instagramColor = 'dark:hover:text-instagramColor'
+
   return (
     <>
       <PageSEO title={`About - ${name}`} description={`About me - ${name}`} />
@@ -34,12 +36,8 @@ export default function AuthorLayout({ children, frontMatter }) {
                 hoverColor="dark:hover:text-primary-700"
               />
               <SocialIcon kind="youtube" href={youtube} hoverColor="dark:hover:text-youtubeRed" />
-              <SocialIcon
-                kind="instagram"
-                href={instagram}
-                hoverColor="dark:hover:text-purple-700"
-              />
-              <SocialIcon kind="tiktok" href={tiktok} hoverColor="dark:hover:text-blue-500" />
+              <SocialIcon kind="instagram" href={instagram} hoverColor={instagramColor} />
+              <SocialIcon kind="tiktok" href={tiktok} hoverColor="dark:hover:text-tiktokColor" />
             </div>
           </div>
           <div className="prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2">{children}</div>
