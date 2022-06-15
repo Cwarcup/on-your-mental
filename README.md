@@ -1,5 +1,7 @@
 # On Your Mental Blog
 
+Website can be found [here](https://on-your-mental.vercel.app/).
+
 Forked from the incredible [Tailwind-Nextjs-Starter-Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog) by [Tim Lrx](https://github.com/timlrx).
 
 Check out the starter documentation or fork this project and start building your own blog!
