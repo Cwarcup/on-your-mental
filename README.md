@@ -1,7 +1,7 @@
 ![tailwind-nextjs-banner](/public/static/images/twitter-card.png)
 
-Compose
-Run `node ./scripts/compose.jsnode ./scripts/compose.js` to bootstrap a new post.
+Composec
+Run `node ./scripts/compose.js` to bootstrap a new post.
 
 # Tailwind Nextjs Starter Blog
 
