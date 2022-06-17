@@ -6,6 +6,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 import Hero from '@/components/Hero'
 import he from 'he'
+import Image from '@/components/Image'
 
 const MAX_DISPLAY = 6
 
@@ -33,16 +34,18 @@ export default function Home({ posts }) {
                 key={slug}
                 className="group bg-day dark:bg-night w-full bg-opacity-50 dark:bg-opacity-50 "
               >
-                <div className="c-card block transform overflow-hidden rounded-lg border-2 border-sky-900/50 bg-transparent transition duration-500 group-hover:scale-105">
-                  <div className="relative max-h-4 overflow-hidden rounded-lg pb-60">
-                    <span>
-                      <img
-                        alt={title}
-                        src={images}
-                        className="absolute inset-0 h-full w-full  object-cover "
-                      />
-                    </span>
-                  </div>
+                <div className="block transform overflow-hidden rounded-lg  bg-transparent transition duration-500 group-hover:scale-105">
+                  <Link href={`/blog/${slug}`}>
+                    <Image
+                      alt={title}
+                      src={images}
+                      className="absolute inset-0 h-fit w-full  object-cover object-center"
+                      width={544}
+                      height={306}
+                      href={`/blog/${slug}`}
+                    />
+                  </Link>
+
                   <div className="py-4 px-2">
                     <span className="inline-flex w-full items-center justify-between">
                       <span className="inline-block rounded border border-gray-700 py-1 px-2 text-xs font-medium">
