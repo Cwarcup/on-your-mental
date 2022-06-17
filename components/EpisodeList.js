@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import Parser from 'rss-parser'
 import ReactAudioPlayer from 'react-audio-player'
-import AudioSocials from '@/components/AudioSocials'
 import Accordion from './Accordion'
 import Loader from '@/components/Loader'
 
@@ -30,17 +29,10 @@ export default function EpisodeList() {
   if (!rssList) {
     return <Loader />
   }
-  console.log('rssList', rssList)
 
   return (
     <>
-      <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-        <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-          Listen
-        </h1>
-      </div>
       <div className="accordion divide-y divide-gray-700">
-        <AudioSocials />
         {rssList.episodes.map((episode, index) => (
           <Accordion
             key={index}
