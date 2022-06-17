@@ -12,7 +12,7 @@ const Card = ({ title, publishedAt, imgSrc, href }) => {
   const formattedDate = date.toLocaleDateString('en-US', options)
 
   return (
-    <div className="md p-4 md:w-1/2" style={{ maxWidth: '544px' }}>
+    <div style={{ maxWidth: '544px' }}>
       <div
         className={`${
           imgSrc && 'h-full'
@@ -27,6 +27,7 @@ const Card = ({ title, publishedAt, imgSrc, href }) => {
                 className="object-cover object-center md:h-36 lg:h-48"
                 width={544}
                 height={306}
+                href={href}
               />
             </Link>
           ) : (
@@ -36,10 +37,11 @@ const Card = ({ title, publishedAt, imgSrc, href }) => {
               className="object-cover object-center md:h-36 lg:h-48"
               width={544}
               height={306}
+              href={href}
             />
           ))}
-        <div className="p-6">
-          <h2 className="mb-3 text-2xl font-medium leading-8 tracking-tight">
+        <div className="p-2">
+          <h2 className="text-md mb-1 font-medium leading-5 tracking-tight">
             {href ? (
               <Link href={href} aria-label={`Link to ${title}`}>
                 {title}
@@ -48,16 +50,9 @@ const Card = ({ title, publishedAt, imgSrc, href }) => {
               title
             )}
           </h2>
-          <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">{formattedDate}</p>
-          {href && (
-            <Link
-              href={href}
-              className="text-base font-medium leading-6 text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-              aria-label={`Link to ${title}`}
-            >
-              Watch &rarr;
-            </Link>
-          )}
+          <p className="prose mb-1 max-w-none text-sm text-gray-500 dark:text-gray-400">
+            {formattedDate}
+          </p>
         </div>
       </div>
     </div>

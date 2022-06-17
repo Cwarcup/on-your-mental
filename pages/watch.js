@@ -14,6 +14,7 @@ export default function Episodes() {
   const [latestVideoDescription, setLatestVideoDescription] = useState()
 
   useEffect(() => {
+    // gets list of videos from youtube channel
     const fetchVideosList = async () => {
       try {
         const result = await YoutubeChannelDetails()
@@ -32,6 +33,7 @@ export default function Episodes() {
       return descriptionArr[index]
     }
 
+    //get latest video and detailed context from youtube
     const fetchLatestVideo = async () => {
       try {
         const result = await ApiClient(
@@ -55,7 +57,7 @@ export default function Episodes() {
   return (
     <>
       <PageSEO title={`Projects - ${siteMetadata.author}`} description={siteMetadata.description} />
-      <div className="flex flex-col divide-y divide-gray-700 sm:content-center">
+      <div className="flex flex-col items-center divide-y divide-gray-700 sm:content-center">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Latest Episode
@@ -66,7 +68,7 @@ export default function Episodes() {
           <h3 className="flex pb-6 text-2xl font-extrabold tracking-tight text-gray-100 sm:text-3xl md:text-5xl">
             Previous Episodes
           </h3>
-          <div className=" flex flex-wrap sm:justify-center">
+          <div className="grid justify-center gap-2 md:grid-cols-3">
             {details.map((d) => (
               <Card
                 key={d.snippet.title}
