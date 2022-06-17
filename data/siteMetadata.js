@@ -6,18 +6,18 @@ const siteMetadata = {
     'The podcast that encourages men to be more open and sometimes vulnerable, especially with each other.',
   language: 'en-us',
   theme: 'dark', // system, dark or light
-  siteUrl: 'https://on-your-mental.vercel.app/',
+  siteUrl: 'https://on-your-mental.vercel.app',
   siteRepo: 'https://github.com/Cwarcup/on-your-mental',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.jpg',
   socialBanner: '/static/images/instagram-card.png',
   email: 'onyourmentalpod@gmail.com',
   github: 'https://github.com/Cwarcup',
-  instagram: 'https://www.instagram.com/onyourmentalpod/',
+  instagram: 'https://www.instagram.com/onyourmentalpod',
   facebook: 'https://www.facebook.com/reuben.hardern',
   youtube: 'https://www.youtube.com/channel/UCYZNw4kprBNpxBrTcnNl_Kw',
-  tiktok: 'https://vm.tiktok.com/ZMd3SD8E1/',
-  linkedin: 'https://www.linkedin.com/in/curtiswarcup/',
+  tiktok: 'https://vm.tiktok.com/ZMd3SD8E1',
+  linkedin: 'https://www.linkedin.com/in/curtiswarcup',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the

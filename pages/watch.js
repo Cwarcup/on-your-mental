@@ -6,6 +6,7 @@ import YoutubeChannelDetails from '@/lib/youtubeChannelDetails'
 import ApiClient from '@/lib/apiClient'
 import AudioSocials from '@/components/AudioSocials'
 import Loader from '@/components/Loader'
+import LatestVideo from '@/components/latestVideo'
 
 export default function Episodes() {
   const [details, setDetails] = useState()
@@ -59,22 +60,7 @@ export default function Episodes() {
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Latest Episode
           </h1>
-        </div>
-        <div className="video-responsive">
-          <iframe
-            width="50%"
-            height="auto"
-            src="https://www.youtube.com/embed/?list=PLLlFKKLh-lgZpNlws_GGwFTAEezWY2rBn"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            title="Embedded youtube"
-          />
-        </div>
-        <div className="prose max-w-none pb-4 pt-4 text-xl leading-7 text-gray-100">
-          <p>{latestVideoDescription}</p>
-
-          <AudioSocials />
+          <LatestVideo />
         </div>
         <div className="container py-12 ">
           <h3 className="flex pb-6 text-2xl font-extrabold tracking-tight text-gray-100 sm:text-3xl md:text-5xl">

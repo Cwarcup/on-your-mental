@@ -5,16 +5,6 @@ import PageTitle from './PageTitle'
 import LatestVideo from './latestVideo'
 
 export default function Hero() {
-  const [latestVideo, setLatestVideo] = useState()
-  const [latestVideoDescription, setLatestVideoDescription] = useState()
-
-  //getDescription
-  function getDescription(str) {
-    const descriptionArr = str.split('\n').filter((item) => item)
-    let index = descriptionArr.findIndex((v) => v.includes('Welcome back to On Your Mental')) + 1
-    return descriptionArr[index]
-  }
-
   return (
     <div className="flex w-full flex-col">
       <div className="space-y-2 pb-4 md:space-y-5">
