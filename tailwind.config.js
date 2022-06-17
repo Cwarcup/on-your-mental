@@ -43,6 +43,7 @@ module.exports = {
         youtubeRed: '#ff0000',
         instagramColor: '#C13584',
         tiktokColor: '#69C9D0',
+        cardBg: '#015A66',
       },
       typography: (theme) => ({
         DEFAULT: {
