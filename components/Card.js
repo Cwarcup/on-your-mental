@@ -1,5 +1,6 @@
 import Image from './Image'
 import Link from './Link'
+import htmlDecode from '../lib/htmlDecode'
 
 const Card = ({ title, publishedAt, imgSrc, href }) => {
   const date = new Date(publishedAt)
@@ -44,7 +45,7 @@ const Card = ({ title, publishedAt, imgSrc, href }) => {
           <h2 className="text-md mb-1 font-medium leading-5 tracking-tight">
             {href ? (
               <Link href={href} aria-label={`Link to ${title}`}>
-                {title}
+                {htmlDecode(title)}
               </Link>
             ) : (
               title
