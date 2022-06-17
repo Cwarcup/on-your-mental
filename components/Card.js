@@ -13,48 +13,26 @@ const Card = ({ title, publishedAt, imgSrc, href }) => {
   const formattedDate = date.toLocaleDateString('en-US', options)
 
   return (
-    <div style={{ maxWidth: '544px' }}>
-      <div
-        className={`${
-          imgSrc && 'h-full'
-        }  overflow-hidden rounded-md border-2 border-gray-200 dark:border-gray-700 dark:border-opacity-20 dark:bg-cardBg dark:bg-opacity-20`}
-      >
-        {imgSrc &&
-          (href ? (
-            <Link href={href} aria-label={`Link to ${title}`}>
-              <Image
-                alt={title}
-                src={imgSrc}
-                className="object-cover object-center md:h-36 lg:h-48"
-                width={544}
-                height={306}
-                href={href}
-              />
-            </Link>
-          ) : (
-            <Image
-              alt={title}
-              src={imgSrc}
-              className="object-cover object-center md:h-36 lg:h-48"
-              width={544}
-              height={306}
-              href={href}
-            />
-          ))}
-        <div className="p-2">
-          <h2 className="text-md mb-1 font-medium leading-5 tracking-tight">
-            {href ? (
-              <Link href={href} aria-label={`Link to ${title}`}>
-                {he.decode(title)}
-              </Link>
-            ) : (
-              title
-            )}
-          </h2>
-          <p className="prose mb-1 max-w-none text-sm text-gray-500 dark:text-gray-400">
-            {formattedDate}
-          </p>
-        </div>
+    <div className="grid grid-cols-2 grid-rows-1 items-center gap-2 md:grid-cols-1 md:grid-rows-2 md:items-start">
+      <div className="col-start-1 col-end-2 row-start-1 md:col-span-2 md:col-start-1 md:row-start-1 md:row-end-2">
+        <Link href={href} aria-label={`Link to ${title}`}>
+          <Image
+            alt={title}
+            src={imgSrc}
+            className="absolute inset-0 h-fit w-full  object-cover object-center"
+            width={544}
+            height={306}
+            href={href}
+          />
+        </Link>
+      </div>
+      <div className="p-2 md:col-span-1 md:col-start-2 md:row-start-2 md:row-end-3">
+        <h2 className="text-md mb-1  font-medium leading-5 tracking-tight">
+          <Link href={href} aria-label={`Link to ${title}`}>
+            {he.decode(title)}
+          </Link>
+        </h2>
+        <p className="prose mb-1 text-sm text-gray-500 dark:text-gray-400">{formattedDate}</p>
       </div>
     </div>
   )
