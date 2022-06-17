@@ -5,6 +5,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 import Hero from '@/components/Hero'
+import he from 'he'
 
 const MAX_DISPLAY = 6
 
@@ -53,10 +54,12 @@ export default function Home({ posts }) {
                     </span>
                     <h2 className="mt-2 mb-2 font-bold md:text-xl">
                       <Link href={`/blog/${slug}`} className="dark:text-gray-100">
-                        {title}
+                        {he.decode(title)}
                       </Link>
                     </h2>
-                    <p className="text-sm tracking-wider dark:text-gray-300">{summary}</p>
+                    <p className="text-sm tracking-wider dark:text-gray-300">
+                      {he.decode(summary)}
+                    </p>
                   </div>
                 </div>
               </div>

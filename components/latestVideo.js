@@ -5,6 +5,7 @@ import YTVideoIdDetails from '../lib/YTVideoIdDetails'
 import getDescription from '../lib/utils/getDescription'
 import AudioSocials from '@/components/AudioSocials'
 import Loader from '@/components/Loader'
+import htmlDecode from '@/lib/htmlDecode'
 
 const LatestVideo = () => {
   const [episodeTitle, setEpisodeTitle] = useState()
@@ -46,7 +47,7 @@ const LatestVideo = () => {
   return (
     <>
       <YoutubeEmbed embedId={videoId} />
-      <div className="text-xl font-bold text-gray-100">{episodeTitle}</div>
+      <div className="text-xl font-bold text-gray-100">{htmlDecode(episodeTitle)}</div>
 
       <p className="prose m-4 max-w-none pb-4 text-lg leading-7 text-gray-400">
         {episodeDescription}
