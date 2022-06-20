@@ -10,7 +10,7 @@ const siteMetadata = {
   siteRepo: 'https://github.com/Cwarcup/on-your-mental',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.jpg',
-  socialBanner: '/static/images/instagram-card.png',
+  socialBanner: '/static/images/instagram-card.jpg',
   email: 'onyourmentalpod@gmail.com',
   github: 'https://github.com/Cwarcup',
   instagram: 'https://www.instagram.com/onyourmentalpod',
