@@ -17,7 +17,7 @@ const siteMetadata = {
   facebook: 'https://www.facebook.com/reuben.hardern',
   youtube: 'https://www.youtube.com/channel/UCYZNw4kprBNpxBrTcnNl_Kw',
   tiktok: 'https://vm.tiktok.com/ZMd3SD8E1',
-  linkedin: 'https://www.linkedin.com/in/curtiswarcup',
+  linkedin: 'https://www.linkedin.com/in/curtiswarcup/',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
