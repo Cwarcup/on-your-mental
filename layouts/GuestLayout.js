@@ -2,7 +2,7 @@ import SocialIcon from '@/components/social-icons'
 import Image from '@/components/Image'
 import { PageSEO } from '@/components/SEO'
 
-export default function AuthorLayout({ children, frontMatter }) {
+export default function GuestLayout({ children, frontMatter }) {
   const { name, avatar, occupation, company, email, instagram, youtube, github, tiktok } =
     frontMatter
 
@@ -11,7 +11,7 @@ export default function AuthorLayout({ children, frontMatter }) {
   return (
     <>
       <PageSEO title={`About - ${name}`} description={`About me - ${name}`} />
-      <div className="divide-y">
+      <div className="divide-y pb-6">
         <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
           <div className="flex flex-col items-center pt-8">
             <Image
