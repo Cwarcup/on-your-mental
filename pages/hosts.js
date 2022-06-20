@@ -1,17 +1,17 @@
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { getFileBySlug } from '@/lib/mdx'
+import GuestLayout from '@/layouts/GuestLayout'
 
 const DEFAULT_LAYOUT = 'AuthorLayout'
-const GUEST_LAYOUT = 'GuestLayout'
 
 export async function getStaticProps() {
   const reuben = await getFileBySlug('authors', ['default'])
   const kabir = await getFileBySlug('authors', ['kabir'])
-  const jeffYu = await getFileBySlug('guests', ['jeff-yu'])
-  return { props: { reuben, kabir, jeffYu } }
+
+  return { props: { reuben, kabir } }
 }
 
-export default function About({ reuben, kabir, jeffYu }) {
+export default function About({ reuben, kabir }) {
   return (
     <>
       <div className="divide-y">
@@ -37,15 +37,23 @@ export default function About({ reuben, kabir, jeffYu }) {
             Guests
           </h1>
         </div>
-        <MDXLayoutRenderer
-          layout={GUEST_LAYOUT}
-          mdxSource={jeffYu.mdxSource}
-          frontMatter={jeffYu.frontMatter}
+      </div>
+      <div className="flex flex-wrap justify-around">
+        <GuestLayout
+          name="Curtis Warcup"
+          avatarFileName="curtis.jpg"
+          occupation="Developer"
+          instagram={'https://www.instagram.com/curtis.warcup/'}
         />
-        <MDXLayoutRenderer
-          layout={GUEST_LAYOUT}
-          mdxSource={jeffYu.mdxSource}
-          frontMatter={jeffYu.frontMatter}
+        <GuestLayout
+          name="Devin Flemming"
+          avatarFileName="devinF.jpg"
+          instagram={'https://www.instagram.com/_dandydev_/'}
+        />
+        <GuestLayout
+          name="Jeff Yu"
+          avatarFileName="jeffYu.jpeg"
+          instagram={'https://www.instagram.com/yuthepoler/'}
         />
       </div>
     </>
