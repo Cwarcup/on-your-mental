@@ -9,12 +9,15 @@ const Accordion = ({ title, content, description, pubDate, guidNumber }) => {
   const [chapterTitle, setChapterTitle] = useState([])
   const [humanTime, setHumanTime] = useState()
   const [error, setError] = useState()
-  let chaptersArr = []
+
   // format description
   function formatDesc(str) {
-    const descriptionArr = str
-      .split('<br/>')
-      .filter((item) => item.replaceAll('(?i)<p[^>]*>', ' ').replaceAll('\\s+', ' ').trim())
+    const descriptionArr = str.split('<br/>').filter((item) =>
+      item
+        .replace(/[(?i)<p[^>]*>]/g, ' ')
+        .replace(/[\\s+]/g, ' ')
+        .trim()
+    )
     let index = descriptionArr.findIndex((v) => v.includes('Welcome back to On Your Mental')) + 1
     return descriptionArr[index]
   }
