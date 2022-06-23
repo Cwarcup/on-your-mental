@@ -1,6 +1,6 @@
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { getFileBySlug } from '@/lib/mdx'
-import GuestLayout from '@/layouts/GuestLayout'
+import { PageSEO } from '@/components/SEO'
 
 const DEFAULT_LAYOUT = 'AuthorLayout'
 
@@ -14,6 +14,10 @@ export async function getStaticProps() {
 export default function About({ reuben, kabir }) {
   return (
     <>
+      <PageSEO
+        title={'About Reuben and Kabir'}
+        description={'about the On Your Mental Podcast hosts'}
+      />
       <div className="divide-y">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
@@ -29,31 +33,6 @@ export default function About({ reuben, kabir }) {
           layout={kabir.frontMatter.layout || DEFAULT_LAYOUT}
           mdxSource={kabir.mdxSource}
           frontMatter={kabir.frontMatter}
-        />
-      </div>
-      <div className="divide-y">
-        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Guests
-          </h1>
-        </div>
-      </div>
-      <div className="flex flex-wrap justify-around">
-        <GuestLayout
-          name="Curtis Warcup"
-          avatarFileName="curtis.jpg"
-          occupation="Developer"
-          instagram={'https://www.instagram.com/curtis.warcup/'}
-        />
-        <GuestLayout
-          name="Devin Flemming"
-          avatarFileName="devinF.jpg"
-          instagram={'https://www.instagram.com/_dandydev_/'}
-        />
-        <GuestLayout
-          name="Jeff Yu"
-          avatarFileName="jeffYu.jpeg"
-          instagram={'https://www.instagram.com/yuthepoler/'}
         />
       </div>
     </>

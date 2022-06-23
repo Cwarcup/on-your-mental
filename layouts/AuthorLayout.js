@@ -24,7 +24,7 @@ export default function AuthorLayout({ children, frontMatter }) {
             <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">{name}</h3>
             <div className="text-gray-500 dark:text-gray-400">{occupation}</div>
             <div className="text-gray-500 dark:text-gray-400">{company}</div>
-            <div className="flex space-x-3 pt-6">
+            <div className="flex space-x-3 pt-4">
               <SocialIcon
                 kind="mail"
                 href={`mailto:${email}`}
@@ -35,7 +35,7 @@ export default function AuthorLayout({ children, frontMatter }) {
               <SocialIcon kind="tiktok" href={tiktok} hoverColor="dark:hover:text-tiktokColor" />
             </div>
           </div>
-          <div className="prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2">{children}</div>
+          <div className="prose max-w-none py-4 dark:prose-dark xl:col-span-2">{children}</div>
         </div>
       </div>
     </>
