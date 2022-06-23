@@ -1,9 +1,11 @@
 const siteMetadata = {
   title: 'On Your Mental',
   author: 'Reuben Hardern',
+  developer: 'cwarcup',
+  devloperGithub: 'https://github.com/Cwarcup',
   headerTitle: 'On Your Mental',
   description:
-    'The podcast that encourages men to be more open and sometimes vulnerable, especially with each other.',
+    'More often than not, men keep things bottled up. We tend not to talk about things that worry us, or things that weigh on our minds, or things we simply care about. Mens mental health can suffer from that. This is where On Your Mental comes in. On this podcast we are changing the way men look at being open with one another. Hosted by Reuben Hardern and Kabir Sandhu. The way we see it, everyone deserves to feel comfortable sharing what is on their minds, and setting an example will help. On Your Mental is ending the stigma around men being vulnerable, one conversation at a time. Learn more about men and what is on their minds with a new episode every week. Video versions also available on YouTube',
   language: 'en-us',
   theme: 'dark', // system, dark or light
   siteUrl: 'https://on-your-mental.vercel.app',
@@ -12,11 +14,12 @@ const siteMetadata = {
   image: '/static/images/avatar.jpg',
   socialBanner: '/static/images/instagram-card.jpg',
   email: 'onyourmentalpod@gmail.com',
-  github: 'https://github.com/Cwarcup',
-  instagram: 'https://www.instagram.com/onyourmentalpod',
-  facebook: 'https://www.facebook.com/reuben.hardern',
   youtube: 'https://www.youtube.com/c/onyourmental',
+  instagram: 'https://www.instagram.com/onyourmentalpod',
   tiktok: 'https://vm.tiktok.com/ZMd3SD8E1',
+  spotifyLink: 'https://open.spotify.com/show/5aJjICGnbefw0hxx8qW0hm',
+  applePodcastLink: 'https://podcasts.apple.com/ca/podcast/on-your-mental/id1551290550',
+  facebook: 'https://www.facebook.com/reuben.hardern',
   linkedin: 'https://www.linkedin.com/in/curtiswarcup/',
   locale: 'en-US',
   analytics: {
