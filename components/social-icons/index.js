@@ -1,8 +1,5 @@
 import Mail from './mail.svg'
-import Github from './github.svg'
-import Facebook from './facebook.svg'
 import Youtube from './youtube.svg'
-import Linkedin from './linkedin.svg'
 import Instagram from './instagram.svg'
 import Tiktok from './tiktok.svg'
 import Applepodcasts from './applepodcasts.svg'
@@ -14,10 +11,7 @@ import Overcast from './overcast.svg'
 
 const components = {
   mail: Mail,
-  github: Github,
-  facebook: Facebook,
   youtube: Youtube,
-  linkedin: Linkedin,
   instagram: Instagram,
   tiktok: Tiktok,
   applePodcasts: Applepodcasts,
