@@ -1,15 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import formatDate from '@/lib/utils/formatDate'
-import axios from 'axios'
-import secondsToTime from '@/lib/utils/secondsToTime'
 
 const Accordion = ({ title, content, description, pubDate, guidNumber }) => {
-  const [chapters, setChapters] = useState()
-  const [timestamp, setTimestamp] = useState([])
-  const [chapterTitle, setChapterTitle] = useState([])
-  const [humanTime, setHumanTime] = useState()
-  const [error, setError] = useState()
-
   // format description
   function formatDesc(str) {
     const descriptionArr = str.split('<br/>').filter((item) =>

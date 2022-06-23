@@ -15,7 +15,7 @@ const siteMetadata = {
   github: 'https://github.com/Cwarcup',
   instagram: 'https://www.instagram.com/onyourmentalpod',
   facebook: 'https://www.facebook.com/reuben.hardern',
-  youtube: 'https://www.youtube.com/channel/UCYZNw4kprBNpxBrTcnNl_Kw',
+  youtube: 'https://www.youtube.com/c/onyourmental',
   tiktok: 'https://vm.tiktok.com/ZMd3SD8E1',
   linkedin: 'https://www.linkedin.com/in/curtiswarcup/',
   locale: 'en-US',
