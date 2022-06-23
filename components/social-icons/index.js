@@ -26,7 +26,7 @@ const components = {
   overcast: Overcast,
 }
 
-const SocialIcon = ({ kind, href, size = 8, hoverColor }) => {
+const SocialIcon = ({ kind, href, size = 8, hoverColor, color = 'text-gray-200' }) => {
   if (!href || (kind === 'mail' && !/^mailto:\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(href)))
     return null
 
@@ -41,7 +41,7 @@ const SocialIcon = ({ kind, href, size = 8, hoverColor }) => {
     >
       <span className="sr-only">{kind}</span>
       <SocialSvg
-        className={`transform fill-current transition duration-500 group-hover:scale-105 dark:text-gray-200 ${hoverColor} h-${size} w-${size}`}
+        className={`transform fill-current transition duration-500 group-hover:scale-105 dark:${color} ${hoverColor} h-${size} w-${size}`}
       />
     </a>
   )
