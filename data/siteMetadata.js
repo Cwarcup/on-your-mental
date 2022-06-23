@@ -8,7 +8,7 @@ const siteMetadata = {
     'More often than not, men keep things bottled up. We tend not to talk about things that worry us, or things that weigh on our minds, or things we simply care about. Mens mental health can suffer from that. This is where On Your Mental comes in. On this podcast we are changing the way men look at being open with one another. Hosted by Reuben Hardern and Kabir Sandhu. The way we see it, everyone deserves to feel comfortable sharing what is on their minds, and setting an example will help. On Your Mental is ending the stigma around men being vulnerable, one conversation at a time. Learn more about men and what is on their minds with a new episode every week. Video versions also available on YouTube',
   language: 'en-us',
   theme: 'dark', // system, dark or light
-  siteUrl: 'https://on-your-mental.vercel.app',
+  siteUrl: 'https://www.onyourmental.com',
   siteRepo: 'https://github.com/Cwarcup/on-your-mental',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.jpg',
@@ -26,7 +26,7 @@ const siteMetadata = {
     // If you want to use an analytics provider you have to add it to the
     // content security policy in the `next.config.js` file.
     // supports plausible, simpleAnalytics, umami or googleAnalytics
-    plausibleDataDomain: 'https://on-your-mental.vercel.app/', // e.g. tailwind-nextjs-starter-blog.vercel.app
+    plausibleDataDomain: 'https://www.onyourmental.com', // e.g. tailwind-nextjs-starter-blog.vercel.app
     simpleAnalytics: false, // true or false
     umamiWebsiteId: '', // e.g. 123e4567-e89b-12d3-a456-426614174000
     googleAnalyticsId: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, // e.g. UA-000000-2 or G-XXXXXXX
