@@ -93,116 +93,127 @@ const LayoutWrapper = ({ children }) => {
                           className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-600 rounded-md bg-gray-100  shadow-lg ring-1 ring-black ring-opacity-5 hover:bg-opacity-50 focus:outline-none"
                           key={link.title}
                         >
-                          <div className="px-1 py-1">
-                            <Menu.Item key={link.links[0].title}>
-                              {({ active }) => (
-                                <button
-                                  className={`${
-                                    active ? 'bg-gray-700 text-primary-400' : 'text-gray-700'
-                                  } group flex w-full items-center  rounded-md px-2 py-2 text-sm font-bold`}
-                                >
-                                  <div className="px-2">
-                                    <SocialIcon
-                                      kind={link.links[0].kind}
-                                      href={link.links[0].href}
-                                      size="5"
-                                      hoverColor="text-youtubeRed"
-                                      color="text-youtubeRed"
-                                    />
-                                  </div>
-                                  <Link href={link.links[0].href}>{link.links[0].title}</Link>
-                                </button>
-                              )}
-                            </Menu.Item>
-                          </div>
-                          <div className="px-1 py-1">
-                            <Menu.Item key={link.links[1].title}>
-                              {({ active }) => (
-                                <button
-                                  className={`${
-                                    active ? 'bg-gray-700 text-primary-400' : 'text-gray-700'
-                                  } group flex w-full items-center  rounded-md px-2 py-2 text-sm font-bold`}
-                                >
-                                  <div className="px-2">
-                                    <SocialIcon
-                                      kind={link.links[1].kind}
-                                      href={link.links[1].href}
-                                      size="5"
-                                      hoverColor="text-instagramColor"
-                                      color="text-instagramColor"
-                                    />
-                                  </div>
-                                  <Link href={link.links[1].href}>{link.links[1].title}</Link>
-                                </button>
-                              )}
-                            </Menu.Item>
-                          </div>
-                          <div className="px-1 py-1">
-                            <Menu.Item key={link.links[2].title}>
-                              {({ active }) => (
-                                <button
-                                  className={`${
-                                    active ? 'bg-gray-700 text-primary-400' : 'text-gray-700'
-                                  } group flex w-full items-center  rounded-md px-2 py-2 text-sm font-bold`}
-                                >
-                                  <div className="px-2">
-                                    <SocialIcon
-                                      kind={link.links[2].kind}
-                                      href={link.links[2].href}
-                                      size="5"
-                                      hoverColor="text-tiktokColor"
-                                      color="text-tiktokColor"
-                                    />
-                                  </div>
-                                  <Link href={link.links[2].href}>{link.links[2].title}</Link>
-                                </button>
-                              )}
-                            </Menu.Item>
-                          </div>
-                          <div className="px-1 py-1">
-                            <Menu.Item key={link.links[3].title}>
-                              {({ active }) => (
-                                <button
-                                  className={`${
-                                    active ? 'bg-gray-700 text-primary-400' : 'text-gray-700'
-                                  } group flex w-full items-center  rounded-md px-2 py-2 text-sm font-bold`}
-                                >
-                                  <div className="px-2">
-                                    <SocialIcon
-                                      kind={link.links[3].kind}
-                                      href={link.links[3].href}
-                                      size="5"
-                                      hoverColor="text-applePodcastsPurple"
-                                      color="text-applePodcastsPurple"
-                                    />
-                                  </div>
-                                  <Link href={link.links[3].href}>{link.links[3].title}</Link>
-                                </button>
-                              )}
-                            </Menu.Item>
-                          </div>
-                          <div className="px-1 py-1">
-                            <Menu.Item key={link.links[4].title}>
-                              {({ active }) => (
-                                <button
-                                  className={`${
-                                    active ? 'bg-gray-700 text-primary-400' : 'text-gray-700'
-                                  } group flex w-full items-center  rounded-md px-2 py-2 text-sm font-bold`}
-                                >
-                                  <div className="px-2">
-                                    <SocialIcon
-                                      kind={link.links[4].kind}
-                                      href={link.links[4].href}
-                                      size="5"
-                                      hoverColor="text-spotifyGreen"
-                                      color="text-spotifyGreen"
-                                    />
-                                  </div>
-                                  <Link href={link.links[4].href}>{link.links[4].title}</Link>
-                                </button>
-                              )}
-                            </Menu.Item>
-                          </div>
+                          <Link href={link.links[0].href}>
+                            <div className="px-1 py-1">
+                              <Menu.Item key={link.links[0].title}>
+                                {({ active }) => (
+                                  <button
+                                    className={`${
+                                      active ? 'bg-gray-700 text-primary-400' : 'text-gray-700'
+                                    } group flex w-full items-center  rounded-md px-2 py-2 text-sm font-bold`}
+                                  >
+                                    <div className="px-2">
+                                      <SocialIcon
+                                        kind={link.links[0].kind}
+                                        href={link.links[0].href}
+                                        size="5"
+                                        hoverColor="text-youtubeRed"
+                                        color="text-youtubeRed"
+                                      />
+                                    </div>
+                                    {link.links[0].title}
+                                  </button>
+                                )}
+                              </Menu.Item>
+                            </div>
+                          </Link>
+                          <Link href={link.links[1].href}>
+                            <div className="px-1 py-1">
+                              <Menu.Item key={link.links[1].title}>
+                                {({ active }) => (
+                                  <button
+                                    className={`${
+                                      active ? 'bg-gray-700 text-primary-400' : 'text-gray-700'
+                                    } group flex w-full items-center  rounded-md px-2 py-2 text-sm font-bold`}
+                                  >
+                                    <div className="px-2">
+                                      <SocialIcon
+                                        kind={link.links[1].kind}
+                                        href={link.links[1].href}
+                                        size="5"
+                                        hoverColor="text-instagramColor"
+                                        color="text-instagramColor"
+                                      />
+                                    </div>
+                                    {link.links[1].title}
+                                  </button>
+                                )}
+                              </Menu.Item>
+                            </div>
+                          </Link>
+                          <Link href={link.links[2].href}>
+                            <div className="px-1 py-1">
+                              <Menu.Item key={link.links[2].title}>
+                                {({ active }) => (
+                                  <button
+                                    className={`${
+                                      active ? 'bg-gray-700 text-primary-400' : 'text-gray-700'
+                                    } group flex w-full items-center  rounded-md px-2 py-2 text-sm font-bold`}
+                                  >
+                                    <div className="px-2">
+                                      <SocialIcon
+                                        kind={link.links[2].kind}
+                                        href={link.links[2].href}
+                                        size="5"
+                                        hoverColor="text-tiktokColor"
+                                        color="text-tiktokColor"
+                                      />
+                                    </div>
+                                    {link.links[2].title}
+                                  </button>
+                                )}
+                              </Menu.Item>
+                            </div>
+                          </Link>
+                          <Link href={link.links[3].href}>
+                            <div className="px-1 py-1">
+                              <Menu.Item key={link.links[3].title}>
+                                {({ active }) => (
+                                  <button
+                                    className={`${
+                                      active ? 'bg-gray-700 text-primary-400' : 'text-gray-700'
+                                    } group flex w-full items-center  rounded-md px-2 py-2 text-sm font-bold`}
+                                  >
+                                    <div className="px-2">
+                                      <SocialIcon
+                                        kind={link.links[3].kind}
+                                        href={link.links[3].href}
+                                        size="5"
+                                        hoverColor="text-applePodcastsPurple"
+                                        color="text-applePodcastsPurple"
+                                      />
+                                    </div>
+                                    {link.links[3].title}
+                                  </button>
+                                )}
+                              </Menu.Item>
+                            </div>
+                          </Link>
+                          <Link href={link.links[4].href}>
+                            <div className="px-1 py-1">
+                              <Menu.Item key={link.links[4].title}>
+                                {({ active }) => (
+                                  <button
+                                    href={link.links[4].href}
+                                    className={`${
+                                      active ? 'bg-gray-700 text-primary-400' : 'text-gray-700'
+                                    } group flex w-full items-center  rounded-md px-2 py-2 text-sm font-bold`}
+                                  >
+                                    <div className="px-2">
+                                      <SocialIcon
+                                        kind={link.links[4].kind}
+                                        href={link.links[4].href}
+                                        size="5"
+                                        hoverColor="text-spotifyGreen"
+                                        color="text-spotifyGreen"
+                                      />
+                                    </div>
+                                    {link.links[4].title}
+                                  </button>
+                                )}
+                              </Menu.Item>
+                            </div>
+                          </Link>
                         </Menu.Items>
                       </Transition>
                     </Menu>
