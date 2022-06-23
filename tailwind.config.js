@@ -37,7 +37,7 @@ module.exports = {
         primary: colors.sky,
         gray: colors.neutral,
         ORMblue: '#05324e',
-        ORMend: '#375b71',
+        ORMend: '#064063',
         spotifyGreen: '#1ED761',
         applePodcastsPurple: '#D56DFB',
         youtubeRed: '#ff0000',

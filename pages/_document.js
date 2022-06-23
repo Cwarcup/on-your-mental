@@ -23,7 +23,7 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#000000" />
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
         </Head>
-        <body className=" bg-ORMblue text-white antialiased">
+        <body className="bg-gradient-to-b from-ORMblue  via-ORMend to-ORMblue text-white antialiased">
           <Main />
           <NextScript />
         </body>
