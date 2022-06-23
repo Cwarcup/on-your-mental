@@ -3,7 +3,6 @@ import axios from 'axios'
 import YoutubeEmbed from './YoutubeEmbed'
 import YTVideoIdDetails from '../lib/YTVideoIdDetails'
 import getDescription from '../lib/utils/getDescription'
-import AudioSocials from '@/components/AudioSocials'
 import Loader from '@/components/Loader'
 import htmlDecode from '@/lib/htmlDecode'
 
@@ -49,13 +48,9 @@ const LatestVideo = () => {
       <YoutubeEmbed embedId={videoId} />
       <div className="text-xl font-bold text-gray-100">{htmlDecode(episodeTitle)}</div>
 
-      <p className="prose m-4 max-w-none pb-4 text-lg leading-7 text-gray-400">
+      <p className="prose m-4 max-w-none pb-2 text-lg leading-7 text-gray-400">
         {episodeDescription}
       </p>
-      <AudioSocials
-        applePodcastLink={'https://podcasts.apple.com/ca/podcast/on-your-mental/id1551290550'}
-        youtubeLink={`https://www.youtube.com/watch?v=${videoId}`}
-      />
     </>
   )
 }
