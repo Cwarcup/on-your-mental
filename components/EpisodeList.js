@@ -5,26 +5,21 @@ import Accordion from './Accordion'
 import Loader from '@/components/Loader'
 
 export default function EpisodeList() {
-  const parser = new Parser()
   const [rssList, setRssList] = useState()
 
   // initial load to fetch data
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const feed = await parser.parseURL('https://feeds.buzzsprout.com/1649641.rss')
-        setRssList({
-          episodes: feed.items,
-          program_title: feed.title,
-          program_description: feed.description,
-        })
-      } catch (error) {
-        console.log('error', error)
-      }
+      const parser = new Parser()
+      const feed = await parser.parseURL('https://feeds.buzzsprout.com/1649641.rss')
+      setRssList({
+        episodes: feed.items,
+        program_title: feed.title,
+        program_description: feed.description,
+      })
     }
-
     fetchData()
-  }, [parser])
+  }, [])
 
   if (!rssList) {
     return <Loader />
