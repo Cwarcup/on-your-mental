@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from './Link'
 import headerNavLinks from '@/data/headerNavLinks'
 import { ChevronRightIcon } from '@heroicons/react/solid'
 import SocialIcon from '@/components/social-icons'
 import siteMetadata from '@/data/siteMetadata'
+import { motion } from 'framer-motion'
+import { FaTiktok, FaInstagram, FaPodcast, FaSpotify } from 'react-icons/fa'
 
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
@@ -60,56 +62,76 @@ const MobileNav = () => {
           className="fixed h-[16rem] w-full cursor-auto focus:outline-none"
           onClick={onToggleNav}
         ></button>
-        <nav className="fixed mt-8 flex h-full flex-col">
+        <nav
+          className="bg-body dark:bg-body-dark visible fixed left-0 right-0 top-[60px] bottom-0 z-50 block h-full w-full max-w-[100vw] overflow-hidden overflow-y-scroll px-6 pb-6 sm:hidden"
+          animate={{ x: 0 }}
+          initial={{ x: '100vw' }}
+          transition={{
+            type: 'spring',
+            stiffness: 300,
+            damping: 30,
+          }}
+        >
+          <div className="divide-border-primary dark:divide-border-primary-dark flex flex-row divide-x py-4 px-2">
+            <div className="w-full text-center">
+              <a
+                href={siteMetadata.tiktok}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center"
+              >
+                <FaTiktok size={20} className="mr-1" />
+                TikTok
+              </a>
+            </div>
+            <div className="w-full text-center">
+              <a
+                href={siteMetadata.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center"
+              >
+                <FaInstagram size={20} className="mr-1" />
+                Instagram
+              </a>
+            </div>
+            <div className="w-full text-center">
+              <a
+                href={siteMetadata.applePodcastLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center"
+              >
+                <FaPodcast size={20} className="mr-1" />
+                Podcast
+              </a>
+            </div>
+            <div className="w-full text-center">
+              <a
+                href={siteMetadata.spotifyLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center"
+              >
+                <FaSpotify size={20} className="mr-1" />
+                Spotify
+              </a>
+            </div>
+          </div>
           {headerNavLinks.map((link, index) => {
             if (link.type !== 'dropdown') {
               return (
-                <div key={index} className="flex items-center px-12 py-4">
+                <div key={link.title} className="dark:border-border-primary-dark border-b py-4">
                   <Link
                     href={link.href}
-                    className="mono-type text-2xl font-bold tracking-widest text-gray-100"
+                    className="block rounded-lg py-4 px-2 text-base font-bold tracking-widest"
                     onClick={onToggleNav}
                   >
                     {link.title}
                   </Link>
-                  <Link href={link.href}>
-                    <ChevronRightIcon
-                      className="ml-2 -mr-1 h-5 w-5 text-violet-200 hover:text-violet-100"
-                      aria-hidden="true"
-                    />
-                  </Link>
                 </div>
               )
             }
-
-            return (
-              <>
-                <footer className="footer text-neutral-content items-center bg-transparent p-4">
-                  <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-                    <SocialIcon
-                      kind="tiktok"
-                      href={siteMetadata.tiktok}
-                      hoverColor="dark:hover:text-tiktokColor"
-                    />
-                    <SocialIcon
-                      kind="instagram"
-                      href={siteMetadata.instagram}
-                      hoverColor="dark:hover:text-instagramColor"
-                    />
-                    <SocialIcon
-                      kind="applePodcasts"
-                      href={siteMetadata.applePodcastLink}
-                      hoverColor="dark:hover:text-applePodcastsPurple"
-                    />
-                    <SocialIcon
-                      kind="spotify"
-                      href={siteMetadata.spotifyLink}
-                      hoverColor="dark:hover:text-spotifyGreen"
-                    />
-                  </div>
-                </footer>
-              </>
-            )
           })}
         </nav>
       </div>
