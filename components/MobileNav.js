@@ -2,6 +2,8 @@ import { useState } from 'react'
 import Link from './Link'
 import headerNavLinks from '@/data/headerNavLinks'
 import { ChevronRightIcon } from '@heroicons/react/solid'
+import SocialIcon from '@/components/social-icons'
+import siteMetadata from '@/data/siteMetadata'
 
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
@@ -58,7 +60,7 @@ const MobileNav = () => {
           className="fixed h-[16rem] w-full cursor-auto focus:outline-none"
           onClick={onToggleNav}
         ></button>
-        <nav className="fixed mt-8 h-full">
+        <nav className="fixed mt-8 flex h-full flex-col">
           {headerNavLinks.map((link, index) => {
             if (link.type !== 'dropdown') {
               return (
@@ -82,23 +84,30 @@ const MobileNav = () => {
 
             return (
               <>
-                {link.links.map((item, index) => (
-                  <div key={index} className="flex items-center  px-12 py-4">
-                    <Link
-                      href={item.href}
-                      className="mono-type text-2xl font-bold tracking-widest text-gray-100"
-                      onClick={onToggleNav}
-                    >
-                      {item.title}
-                    </Link>
-                    <Link href={item.href}>
-                      <ChevronRightIcon
-                        className="ml-2 -mr-1 h-5 w-5 text-violet-200 hover:text-violet-100"
-                        aria-hidden="true"
-                      />
-                    </Link>
+                <footer className="footer text-neutral-content items-center bg-transparent p-4">
+                  <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+                    <SocialIcon
+                      kind="tiktok"
+                      href={siteMetadata.tiktok}
+                      hoverColor="dark:hover:text-tiktokColor"
+                    />
+                    <SocialIcon
+                      kind="instagram"
+                      href={siteMetadata.instagram}
+                      hoverColor="dark:hover:text-instagramColor"
+                    />
+                    <SocialIcon
+                      kind="applePodcasts"
+                      href={siteMetadata.applePodcastLink}
+                      hoverColor="dark:hover:text-applePodcastsPurple"
+                    />
+                    <SocialIcon
+                      kind="spotify"
+                      href={siteMetadata.spotifyLink}
+                      hoverColor="dark:hover:text-spotifyGreen"
+                    />
                   </div>
-                ))}
+                </footer>
               </>
             )
           })}

@@ -8,11 +8,6 @@ export default function Footer() {
       <div className="mt-16 flex flex-col items-center">
         <div className="mb-5 flex space-x-4">
           <SocialIcon
-            kind="mail"
-            href={`mailto:${siteMetadata.email}`}
-            hoverColor="dark:hover:text-primary-700"
-          />
-          <SocialIcon
             kind="youtube"
             href={siteMetadata.youtube}
             hoverColor="dark:hover:text-youtubeRed"
