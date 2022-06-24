@@ -52,7 +52,7 @@ const MobileNav = () => {
         </svg>
       </button>
       <div
-        className={`fixed top-24 right-0 z-10 -mt-3 h-[96rem] w-full transform bg-gray-800 opacity-95 duration-300 ease-in-out ${
+        className={`fixed top-24 right-0 z-10 mt-2 h-[96rem] w-full transform bg-gray-800 opacity-95 duration-300 ease-in-out ${
           navShow ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -81,7 +81,6 @@ const MobileNav = () => {
                 className="flex items-center justify-center"
               >
                 <FaTiktok size={20} className="mr-1" />
-                TikTok
               </a>
             </div>
             <div className="w-full text-center">
@@ -92,7 +91,6 @@ const MobileNav = () => {
                 className="flex items-center justify-center"
               >
                 <FaInstagram size={20} className="mr-1" />
-                Instagram
               </a>
             </div>
             <div className="w-full text-center">
@@ -103,7 +101,6 @@ const MobileNav = () => {
                 className="flex items-center justify-center"
               >
                 <FaPodcast size={20} className="mr-1" />
-                Podcast
               </a>
             </div>
             <div className="w-full text-center">
@@ -114,7 +111,6 @@ const MobileNav = () => {
                 className="flex items-center justify-center"
               >
                 <FaSpotify size={20} className="mr-1" />
-                Spotify
               </a>
             </div>
           </div>
