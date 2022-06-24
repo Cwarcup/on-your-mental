@@ -17,7 +17,7 @@ export async function getStaticProps() {
   return { props: { posts } }
 }
 
-export default function Home() {
+export default function Home({ posts }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
