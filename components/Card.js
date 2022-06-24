@@ -20,8 +20,8 @@ const Card = ({ title, publishedAt, imgSrc, href }) => {
             alt={title}
             src={imgSrc}
             className="absolute inset-0 h-fit w-full  object-cover object-center"
-            width={544}
-            height={306}
+            width="320"
+            height="180"
             href={href}
           />
         </Link>

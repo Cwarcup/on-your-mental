@@ -52,7 +52,7 @@ export default function HeroVideoList() {
                 key={d.snippet.title}
                 title={d.snippet.title}
                 publishedAt={d.snippet.publishedAt}
-                imgSrc={d.snippet.thumbnails.high.url}
+                imgSrc={d.snippet.thumbnails.medium.url}
                 href={`https://www.youtube.com/watch?v=${d.id.videoId}`}
               />
             ))}

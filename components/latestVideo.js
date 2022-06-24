@@ -49,13 +49,13 @@ const LatestVideo = () => {
   })
 
   return (
-    <>
+    <div className="px-5">
       <YoutubeEmbed embedId={videoId} />
       <div className="text-xl font-bold text-gray-100">{htmlDecode(episodeTitle)}</div>
       <p className="prose m-4 max-w-none pb-2 text-lg leading-7 text-gray-400">
         {episodeDescription}
       </p>
-    </>
+    </div>
   )
 }
 
