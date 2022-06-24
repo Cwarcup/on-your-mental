@@ -1,10 +1,7 @@
 import { useState, useEffect } from 'react'
 import Link from './Link'
 import headerNavLinks from '@/data/headerNavLinks'
-import { ChevronRightIcon } from '@heroicons/react/solid'
-import SocialIcon from '@/components/social-icons'
 import siteMetadata from '@/data/siteMetadata'
-import { motion } from 'framer-motion'
 import { FaTiktok, FaInstagram, FaPodcast, FaSpotify } from 'react-icons/fa'
 
 const MobileNav = () => {
