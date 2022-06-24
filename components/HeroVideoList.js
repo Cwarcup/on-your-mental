@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import Card from '@/components/Card'
 import apiHeroYoutubeList from '@/lib/apiHeroYoutubeList'
-import ApiClient from '@/lib/apiClient'
 import Loader from '@/components/Loader'
 import LatestVideo from '@/components/latestVideo'
 
 export default function HeroVideoList() {
   const [details, setDetails] = useState()
-  const [latestVideo, setLatestVideo] = useState()
-  const [latestVideoDescription, setLatestVideoDescription] = useState()
 
   useEffect(() => {
     // gets list of videos from youtube channel
+    // returns lst of 7 most recent videos
     const fetchVideosList = async () => {
       try {
         const result = await apiHeroYoutubeList()
@@ -29,25 +27,9 @@ export default function HeroVideoList() {
       let index = descriptionArr.findIndex((v) => v.includes('Welcome back to On Your Mental')) + 1
       return descriptionArr[index]
     }
-
-    //get latest video and detailed context from youtube
-    const fetchLatestVideo = async () => {
-      try {
-        const result = await ApiClient(
-          'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=K9PQ6IoMXpA&key='
-        )
-        setLatestVideo(result)
-        const description = await result
-        const formattedDesc = getDescription(description[0].snippet.description)
-        setLatestVideoDescription(formattedDesc)
-      } catch (error) {
-        console.log('error', error)
-      }
-    }
-    fetchLatestVideo()
   }, [])
 
-  if (!details || !latestVideo) {
+  if (!details) {
     return <Loader />
   }
 

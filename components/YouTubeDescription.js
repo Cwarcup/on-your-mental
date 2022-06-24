@@ -10,7 +10,7 @@ const YoutubeDescription = ({ videoId }) => {
   const getDescription = async (videoId) => {
     const config = {
       method: 'get',
-      url: `https://www.googleapis.com/youtube/v3/videos?id=${videoId}&key=${process.env.NEXT_PUBLIC_YOUTUBE_API_KEY}&fields=items(id,snippet(channelId,title,categoryId,description,thumbnails),statistics)&part=snippet,statistics`,
+      url: `https://www.googleapis.com/youtube/v3/videos?id=${videoId}&key=${process.env.NEXT_PUBLIC_YOUTUBE_API_KEY}&fields=items(id,snippet(channelId,title,description,thumbnails),statistics)&part=snippet,statistics`,
       headers: {},
     }
 

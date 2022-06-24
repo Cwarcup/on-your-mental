@@ -13,6 +13,7 @@ const LatestVideo = () => {
   const [error, setError] = useState()
 
   useEffect(() => {
+    // get latest video from youtube, returns one video.
     const config = {
       method: 'get',
       url: `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&channelId=UCYZNw4kprBNpxBrTcnNl_Kw&order=date&key=${process.env.NEXT_PUBLIC_YOUTUBE_API_KEY}`,
@@ -32,13 +33,17 @@ const LatestVideo = () => {
     fetchData()
   }, [])
 
+  // if data is empty, show loader
   if (!data) {
     return <Loader />
   }
 
-  // use the videoId to fetch the details of the video
+  // get video ID from data
   let videoId = data[0].id.videoId
+
+  // use the videoId to fetch the details of the video
   const details = YTVideoIdDetails(videoId).then((result) => {
+    // get the title and description of the video
     setEpisodeTitle(result.items[0].snippet.title)
     setEpisodeDescription(getDescription(result.items[0].snippet.description))
   })
@@ -47,7 +52,6 @@ const LatestVideo = () => {
     <>
       <YoutubeEmbed embedId={videoId} />
       <div className="text-xl font-bold text-gray-100">{htmlDecode(episodeTitle)}</div>
-
       <p className="prose m-4 max-w-none pb-2 text-lg leading-7 text-gray-400">
         {episodeDescription}
       </p>
