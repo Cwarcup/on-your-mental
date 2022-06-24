@@ -24,7 +24,7 @@ export default function EpisodeList() {
     }
 
     fetchData()
-  }, [])
+  }, [parser])
 
   if (!rssList) {
     return <Loader />

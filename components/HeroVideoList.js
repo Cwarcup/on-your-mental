@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Card from '@/components/Card'
-import HeroYoutubeList from '@/lib/HeroYoutubeList'
+import apiHeroYoutubeList from '@/lib/apiHeroYoutubeList'
 import ApiClient from '@/lib/apiClient'
 import Loader from '@/components/Loader'
 import LatestVideo from '@/components/latestVideo'
@@ -14,7 +14,7 @@ export default function HeroVideoList() {
     // gets list of videos from youtube channel
     const fetchVideosList = async () => {
       try {
-        const result = await HeroYoutubeList()
+        const result = await apiHeroYoutubeList()
         setDetails(result)
       } catch (error) {
         console.log('error', error)
