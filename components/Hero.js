@@ -12,10 +12,6 @@ export default function Hero() {
           their minds! Ranging from something they're working on, something they're thinking about,
           to relationships or general feelings. All of it's on the table!
         </p>
-        <h3 className="flex pb-6 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl">
-          Latest Episode
-        </h3>
-        <LatestVideo />
       </div>
     </div>
   )
