@@ -4,8 +4,6 @@ import Instagram from './instagram.svg'
 import Tiktok from './tiktok.svg'
 import Applepodcasts from './applepodcasts.svg'
 import Spotify from './spotify.svg'
-import Castro from './castro.svg'
-import Overcast from './overcast.svg'
 
 // Icons taken from: https://simpleicons.org/
 
@@ -16,8 +14,6 @@ const components = {
   tiktok: Tiktok,
   applePodcasts: Applepodcasts,
   spotify: Spotify,
-  castro: Castro,
-  overcast: Overcast,
 }
 
 const SocialIcon = ({ kind, href, size = 8, hoverColor, color = 'text-gray-200' }) => {
