@@ -6,14 +6,8 @@ company: On Your Mental
 instagram: https://www.instagram.com/kabir.sandhu/
 ---
 
-🦁 Hakuna Matata @onyourmentalpod
+“Happiness can be found even in the darkest of times, if one only remembers to turn on the light.” — Albus Dumbledore
 
-I know words. I have the best words. Some people have an ability to write placeholder text... It's an art you're basically born with. You either have it or you don't.
+Kabir is on a journey and he has been for some time. Growing up in a household full of men, conversations regarding mental health were non-existent for him. His family molded him to be a strong, tenacious man that remained stoic during the toughest of times. Kabir understands now, more than ever, that mental health flows hand in hand with physical health, and neither can be disregarded.
 
-I write the best placeholder text, and I'm the biggest developer on the web by far... While that's mock-ups and this is politics, are they really so different?
-
-Lorem Ipsum better hope that there are no "tapes" of our conversations before he starts leaking to the press!
-
-Trump Ipsum is calling for a total and complete shutdown of Muslim text entering your website.
-
-Despite the constant negative ipsum covfefe. Lorem Ipsum is unattractive, both inside and out. I fully understand why it’s former users left it for something else. They made a good decision.
+On Your Mental is all about breaking that mould and getting comfortable with being uncomfortable. We look forward to grow with all of you, one episode, one conversation at a time.
