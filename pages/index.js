@@ -49,7 +49,7 @@ export default function Home({ posts }) {
         <div className="space-y-2 pb-4 md:space-y-5">
           <PageTitle>Welcome to On Your Mental</PageTitle>
 
-          <p className="prose m-4 max-w-none pb-4 text-center text-lg leading-7 text-gray-500">
+          <p className="prose m-4 max-w-none pb-4 text-center text-lg leading-7 text-gray-700">
             A podcast that shares candid and open conversations between & about men and what's on
             their minds! Ranging from something they're working on, something they're thinking
             about, to relationships or general feelings. All of it's on the table!
@@ -58,7 +58,7 @@ export default function Home({ posts }) {
       </div>
       <div className="flex flex-col items-center divide-y divide-gray-700 sm:content-center">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Latest Episode
           </h1>
           <LatestVideo />
