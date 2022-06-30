@@ -33,7 +33,7 @@ export default function Footer() {
             hoverColor="dark:hover:text-spotifyGreen"
           />
         </div>
-        <div className="mb-2  flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
+        <div className="mb-2  flex space-x-2 text-sm text-gray-500">
           <Link href="https://www.cwarcup.com/">{siteMetadata.developer}</Link>
           <div>{` • `}</div>
           <div>{`© ${new Date().getFullYear()}`}</div>
