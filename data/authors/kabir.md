@@ -1,6 +1,6 @@
 ---
 name: Kabir Sandhu
-avatar: /static/images/kabir-avatar.jpg
+avatar: /static/images/kabir-headshot.jpg
 occupation: Host
 company: On Your Mental
 instagram: https://www.instagram.com/kabir.sandhu/
