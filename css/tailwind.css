@@ -65,3 +65,9 @@ header.isSticky .title {
   width: 100%;
   position: absolute;
 }
+
+.border-card {
+  border-style: solid !important;
+  border-width: 3px !important;
+  border-color: #015a66 !important;
+}
