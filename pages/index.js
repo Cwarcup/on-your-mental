@@ -64,18 +64,23 @@ export default function Home({ posts }) {
           <LatestVideo />
         </div>
         <div className="container py-12 ">
-          <h3 className="flex pb-6 text-2xl font-extrabold tracking-tight text-gray-100 sm:text-3xl md:text-5xl">
+          <h3 className="flex pb-6 text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl md:text-5xl">
             Previous Episodes
           </h3>
           <div className="grid justify-center gap-2 md:grid-cols-3">
             {details.slice(1).map((d) => (
-              <Card
+              <div
+                className="rounded-lg bg-gradient-to-b from-gray-900 to-ORMblue  p-1 shadow-lg"
                 key={d.snippet.title}
-                title={d.snippet.title}
-                publishedAt={d.snippet.publishedAt}
-                imgSrc={d.snippet.thumbnails.medium.url}
-                href={`https://www.youtube.com/watch?v=${d.id.videoId}`}
-              />
+              >
+                <Card
+                  key={d.snippet.title}
+                  title={d.snippet.title}
+                  publishedAt={d.snippet.publishedAt}
+                  imgSrc={d.snippet.thumbnails.medium.url}
+                  href={`https://www.youtube.com/watch?v=${d.id.videoId}`}
+                />
+              </div>
             ))}
           </div>
         </div>
