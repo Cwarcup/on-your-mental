@@ -17,7 +17,7 @@ const LayoutWrapper = ({ children }) => {
   const stuckClasses =
     'py-2 sticky top-n-1 z-50 transition-all backdrop isSticky mx-auto border-b border-slate-900/10 dark:border-slate-300/10 mb-5 w-full'
   const unstuckClasses =
-    'py-2 md:py-8 sticky top-n-1 z-50 transition-all backdrop mx-auto border-b border-b-0 border-slate-900/10 dark:border-slate-300/10 mb-5 w-full'
+    'py-2 md:py-8 sticky top-n-1 z-50 transition-all unstuck-backdrop mx-auto border-b border-b-0 border-slate-900/10 dark:border-slate-300/10 mb-5 w-full'
 
   const classes = stuck ? stuckClasses : unstuckClasses
 
@@ -36,7 +36,7 @@ const LayoutWrapper = ({ children }) => {
   return (
     <>
       <header className={classes} ref={ref}>
-        <div className="mx-auto  flex max-w-3xl items-center justify-between px-4 sm:px-6 xl:max-w-5xl xl:px-0">
+        <div className="mx-auto flex max-w-3xl items-center justify-between px-4 sm:px-6 xl:max-w-5xl xl:px-0">
           <div>
             <Link href="/" aria-label="On Your Mental">
               <div className=" flex items-center justify-between">

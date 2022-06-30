@@ -35,7 +35,7 @@ export default function AuthorLayout({ children, frontMatter }) {
               <SocialIcon kind="tiktok" href={tiktok} hoverColor="dark:hover:text-tiktokColor" />
             </div>
           </div>
-          <div className="prose max-w-none rounded bg-cardBg bg-opacity-50 px-4 py-1 shadow-lg dark:prose-dark xl:col-span-2">
+          <div className="prose max-w-none rounded bg-ORMblue px-4 py-1 shadow-lg dark:prose-dark xl:col-span-2">
             {children}
           </div>
         </div>

@@ -30,7 +30,12 @@ input:-webkit-autofill:focus {
 
 .backdrop {
   backdrop-filter: blur(6px);
-  background-color: rgba(5, 50, 78, 0.5);
+  background-color: rgba(5, 50, 78, 0.75);
+}
+
+.unstuck-backdrop {
+  backdrop-filter: blur(6px);
+  background-color: rgba(5, 50, 78, 0.9);
 }
 
 .top-n-1 {

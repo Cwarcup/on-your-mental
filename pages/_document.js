@@ -13,7 +13,7 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#000000" />
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
         </Head>
-        <body className="bg-ORMblue from-ORMblue  via-ORMend to-ORMblue text-white antialiased">
+        <body className="bg-grayBg text-white antialiased">
           <Main />
           <NextScript />
         </body>
