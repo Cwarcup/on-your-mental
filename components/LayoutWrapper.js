@@ -82,7 +82,7 @@ const LayoutWrapper = ({ children }) => {
                         leaveTo="transform opacity-0 scale-95"
                       >
                         <Menu.Items
-                          className="absolute right-0 mt-2 w-36 origin-top-right rounded-md bg-gray-100  shadow-lg"
+                          className="absolute right-0 mt-2 w-36 origin-top-right rounded-md bg-gray-200 shadow-lg"
                           key={link.title}
                         >
                           <Link href={link.links[0].href}>
@@ -91,8 +91,8 @@ const LayoutWrapper = ({ children }) => {
                                 {({ active }) => (
                                   <button
                                     className={`${
-                                      active ? ' text-primary-400' : 'text-gray-700'
-                                    } group flex w-full items-center  rounded-md px-2 py-2 text-sm font-bold`}
+                                      active ? ' text-cardBg' : 'text-gray-900'
+                                    } group flex w-full items-center rounded-md px-2 py-2 text-sm font-bold`}
                                   >
                                     <div className="px-2">
                                       <SocialIcon
@@ -115,7 +115,7 @@ const LayoutWrapper = ({ children }) => {
                                 {({ active }) => (
                                   <button
                                     className={`${
-                                      active ? ' text-primary-400' : 'text-gray-700'
+                                      active ? ' text-cardBg' : 'text-gray-900'
                                     } group flex w-full items-center  rounded-md px-2 py-2 text-sm font-bold`}
                                   >
                                     <div className="px-2">
@@ -139,7 +139,7 @@ const LayoutWrapper = ({ children }) => {
                                 {({ active }) => (
                                   <button
                                     className={`${
-                                      active ? ' text-primary-400' : 'text-gray-700'
+                                      active ? ' text-cardBg' : 'text-gray-900'
                                     } group flex w-full items-center  rounded-md px-2 py-2 text-sm font-bold`}
                                   >
                                     <div className="px-2">
@@ -163,7 +163,7 @@ const LayoutWrapper = ({ children }) => {
                                 {({ active }) => (
                                   <button
                                     className={`${
-                                      active ? ' text-primary-400' : 'text-gray-700'
+                                      active ? ' text-cardBg' : 'text-gray-900'
                                     } group flex w-full items-center  rounded-md px-2 py-2 text-sm font-bold`}
                                   >
                                     <div className="px-2">
@@ -188,7 +188,7 @@ const LayoutWrapper = ({ children }) => {
                                   <button
                                     href={link.links[4].href}
                                     className={`${
-                                      active ? ' text-primary-400' : 'text-gray-700'
+                                      active ? ' text-cardBg' : 'text-gray-900'
                                     } group flex w-full items-center  rounded-md px-2 py-2 text-sm font-bold`}
                                   >
                                     <div className="px-2">
