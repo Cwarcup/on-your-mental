@@ -32,7 +32,7 @@ const Card = ({ title, publishedAt, imgSrc, href }) => {
             {he.decode(title)}
           </Link>
         </h2>
-        <p className="prose mb-1 text-sm text-gray-500">{formattedDate}</p>
+        <p className="prose mb-1 text-sm text-gray-300">{formattedDate}</p>
       </div>
     </div>
   )
