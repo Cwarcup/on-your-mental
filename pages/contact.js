@@ -13,11 +13,11 @@ export default function Contact() {
 
       <div className="flex h-screen flex-col items-center">
         <div className="space-y-2 py-4 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          <h1 className="text-5xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-6xl sm:leading-10 md:text-6xl md:leading-14">
             Contact
           </h1>
         </div>
-        <h3 className="max-w-md  py-4 text-center ">
+        <h3 className="max-w-md py-4 text-center text-gray-700">
           If there's topics you want to see discussed, DM on Instagram, or send an email.
         </h3>
         <div>
@@ -26,13 +26,13 @@ export default function Contact() {
               className="flex transform flex-col items-center transition duration-500 hover:scale-105"
               href={`mailto:${siteMetadata.email}`}
             >
-              <HiOutlineMail size="80" className="text-gray-100 hover:text-primary-400" />
+              <HiOutlineMail size="80" className="text-gray-700 hover:text-primary-400" />
             </a>
             <a
               className="flex transform flex-col items-center transition duration-500 hover:scale-105"
               href={siteMetadata.instagram}
             >
-              <BsInstagram size="80" className=" text-gray-100 hover:text-instagramColor" />
+              <BsInstagram size="80" className=" text-gray-700 hover:text-instagramColor" />
             </a>
           </div>
         </div>
