@@ -17,8 +17,10 @@ export default function Contact() {
             Contact
           </h1>
         </div>
-        <h3 className="max-w-md py-4 text-center text-gray-700">
-          If there's topics you want to see discussed, DM on Instagram, or send an email.
+        <h3 className="max-w-sm py-4 text-center text-gray-700 md:max-w-lg">
+          If there’s a topic you want to see covered, or a question answered directly or in a video,
+          we want to hear from you! Send us an email, or DM us on Instagram, and we’ll get back to
+          you!
         </h3>
         <div>
           <div className="grid auto-rows-fr grid-cols-1 items-center gap-5 py-4 md:grid-cols-2">
