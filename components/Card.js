@@ -13,13 +13,13 @@ const Card = ({ title, publishedAt, imgSrc, href }) => {
   const formattedDate = date.toLocaleDateString('en-US', options)
 
   return (
-    <div className="grid h-fit grid-cols-2 grid-rows-1 items-center gap-2 md:auto-rows-auto md:grid-cols-1 md:items-start">
+    <div className="mt-1 grid h-fit grid-cols-2 grid-rows-1 items-center justify-items-center gap-2 md:auto-rows-auto md:grid-cols-1 md:items-start ">
       <div className="col-start-1 col-end-2 row-start-1 md:col-span-2 md:col-start-1 md:row-start-1 md:row-end-2">
         <Link href={href} aria-label={`Link to ${title}`}>
           <Image
             alt={title}
             src={imgSrc}
-            className="absolute inset-0 h-fit w-full  object-cover object-center"
+            className="absolute inset-0 h-fit w-full object-cover"
             width="320"
             height="180"
             href={href}
