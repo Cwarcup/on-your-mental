@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import siteMetadata from '@/data/siteMetadata'
 import Card from '@/components/Card'
 import { PageSEO } from '@/components/SEO'
 import YoutubeChannelDetails from '@/lib/youtubeChannelDetails'
@@ -35,18 +34,23 @@ export default function Episodes() {
 
       <div className="flex flex-col items-center divide-y divide-gray-700 sm:content-center">
         <div className="container py-12 ">
-          <h3 className="flex pb-6 text-2xl font-extrabold tracking-tight text-gray-100 sm:text-3xl md:text-5xl">
+          <h3 className="flex pb-6 text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl md:text-5xl">
             Recent Episodes
           </h3>
           <div className="grid justify-center gap-2 md:grid-cols-3">
             {details.map((d) => (
-              <Card
+              <div
                 key={d.snippet.title}
-                title={d.snippet.title}
-                publishedAt={d.snippet.publishedAt}
-                imgSrc={d.snippet.thumbnails.high.url}
-                href={`https://www.youtube.com/watch?v=${d.id.videoId}`}
-              />
+                className="rounded-lg bg-gradient-to-b from-gray-900 to-ORMblue  p-1 shadow-lg"
+              >
+                <Card
+                  key={d.snippet.title}
+                  title={d.snippet.title}
+                  publishedAt={d.snippet.publishedAt}
+                  imgSrc={d.snippet.thumbnails.high.url}
+                  href={`https://www.youtube.com/watch?v=${d.id.videoId}`}
+                />
+              </div>
             ))}
           </div>
         </div>
