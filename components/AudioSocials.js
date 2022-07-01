@@ -11,7 +11,7 @@ export default function AudioSocials({
 }) {
   return (
     <>
-      <div className="flex flex-col items-center py-5">
+      <div className="flex flex-col items-center space-y-2 py-4 md:space-y-5">
         <div className="flex gap-3 space-x-4">
           <SocialIcon kind="spotify" href={spotifyLink} hoverColor={green} />
           <SocialIcon kind="applePodcasts" href={applePodcastLink} hoverColor={purple} />

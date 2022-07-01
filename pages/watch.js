@@ -32,7 +32,7 @@ export default function Episodes() {
         description="List of recent episodes from On Your Mental Podcast"
       />
       <div className="flex flex-col items-center sm:content-center">
-        <div className="container py-12">
+        <div className="space-y-2 py-4 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Recent Episodes
           </h1>
