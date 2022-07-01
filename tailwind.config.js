@@ -44,7 +44,7 @@ module.exports = {
         instagramColor: '#C13584',
         tiktokColor: '#69C9D0',
         cardBg: '#015A66',
-        blueBg: '#a5BECC',
+        blueBg: '#F5F5F5',
         grayBg: '#D8D2CB',
       },
       typography: (theme) => ({
