@@ -30,33 +30,35 @@ export default function ListenEpisodes() {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="space-y-2 pt-6 pb-1 md:space-y-5">
-        <div className="divide-y divide-gray-700">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Listen
-          </h1>
-          <AudioSocials className="pt-4" />
+      <div className="divide-y divide-gray-700">
+        <div className="space-y-2 pt-6 pb-1 md:space-y-5">
+          <div className="flex items-baseline justify-between">
+            <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+              Listen
+            </h1>
+            <AudioSocials />
+          </div>
         </div>
-      </div>
-      <div className="accordion divide-y divide-gray-700">
-        {rssList.episodes.map((episode, index) => (
-          <Accordion
-            key={index}
-            title={episode.title}
-            description={episode.content}
-            pubDate={episode.pubDate}
-            content={
-              <ReactAudioPlayer
-                id={`episode-${index}`}
-                className="m-auto"
-                src={episode.enclosure.url}
-                controls
-                autoplay={false}
-              />
-            }
-            guidNumber={episode.guid}
-          />
-        ))}
+        <div className="accordion divide-y divide-gray-700">
+          {rssList.episodes.map((episode, index) => (
+            <Accordion
+              key={index}
+              title={episode.title}
+              description={episode.content}
+              pubDate={episode.pubDate}
+              content={
+                <ReactAudioPlayer
+                  id={`episode-${index}`}
+                  className="m-auto"
+                  src={episode.enclosure.url}
+                  controls
+                  autoplay={false}
+                />
+              }
+              guidNumber={episode.guid}
+            />
+          ))}
+        </div>
       </div>
     </>
   )
