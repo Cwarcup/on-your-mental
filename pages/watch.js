@@ -31,13 +31,12 @@ export default function Episodes() {
         title="Recent episodes - On Your Mental"
         description="List of recent episodes from On Your Mental Podcast"
       />
-
-      <div className="flex flex-col items-center divide-y divide-gray-700 sm:content-center">
-        <div className="container py-12 ">
-          <h3 className="flex pb-6 text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl md:text-5xl">
+      <div className="flex flex-col items-center sm:content-center">
+        <div className="container py-12">
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Recent Episodes
-          </h3>
-          <div className="grid justify-center gap-2 md:grid-cols-3">
+          </h1>
+          <div className="mt-4 grid justify-center gap-2 md:grid-cols-3">
             {details.map((d) => (
               <div
                 key={d.snippet.title}
