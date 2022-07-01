@@ -3,8 +3,7 @@ import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 import he from 'he'
 import Image from '@/components/Image'
-import { BsInstagram } from 'react-icons/bs'
-import { HiOutlineMail } from 'react-icons/hi'
+import { BsInstagram, BsEnvelope } from 'react-icons/bs'
 
 export default function Contact() {
   return (
@@ -28,7 +27,7 @@ export default function Contact() {
               className="flex transform flex-col items-center transition duration-500 hover:scale-105"
               href={`mailto:${siteMetadata.email}`}
             >
-              <HiOutlineMail size="80" className="text-gray-700 hover:text-primary-400" />
+              <BsEnvelope size="80" className="text-gray-700 hover:text-primary-400" />
             </a>
             <a
               className="flex transform flex-col items-center transition duration-500 hover:scale-105"
