@@ -31,10 +31,12 @@ export default function ListenEpisodes() {
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="space-y-2 pt-6 pb-1 md:space-y-5">
-        <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-          Listen
-        </h2>
-        <AudioSocials />
+        <div className="divide-y divide-gray-700">
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+            Listen
+          </h1>
+          <AudioSocials className="pt-4" />
+        </div>
       </div>
       <div className="accordion divide-y divide-gray-700">
         {rssList.episodes.map((episode, index) => (
