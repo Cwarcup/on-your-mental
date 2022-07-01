@@ -3,7 +3,6 @@ name: Reuben Hardern
 avatar: /static/images/avatar.jpg
 occupation: Owner & Host
 company: On Your Mental
-instagram: https://www.instagram.com/reubenhardern/
 ---
 
 More often than not, men keep things bottled up. We tend not to talk about things that worry us, or things that weigh on our minds, or things we simply care about. Men's mental health can suffer from that. This is where On Your Mental comes in.

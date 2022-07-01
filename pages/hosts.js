@@ -20,7 +20,7 @@ export default function About({ reuben, kabir }) {
       />
       <div className="divide-y divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-gray-900sm:text-4xl text-3xl font-extrabold leading-9 tracking-tight sm:leading-10 md:text-6xl md:leading-14">
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:leading-10 marker:sm:text-4xl md:text-6xl md:leading-14">
             About The Hosts
           </h1>
         </div>
