@@ -50,9 +50,10 @@ export default function Home({ posts }) {
           <PageTitle>Welcome to On Your Mental</PageTitle>
 
           <p className="prose m-4 max-w-none pb-4 text-center text-lg leading-7 text-gray-700">
-            A podcast that shares candid and open conversations between & about men and what's on
-            their minds! Ranging from something they're working on, something they're thinking
-            about, to relationships or general feelings. All of it's on the table!
+            The podcast that shares candid, open, and often vulnerable conversations between & about
+            men, and what's on their minds! Mental health, relationships, feelings, outlooks on
+            life, all of it's on the table. On Your Mental is ending the stigma around men being
+            vulnerable, one conversation at a time.
           </p>
         </div>
       </div>
