@@ -13,7 +13,7 @@ const Accordion = ({ title, content, description, pubDate }) => {
     return descriptionArr[index]
   }
 
-  const formattedDec = formatDesc(description)
+  const formattedDec = formatDesc(description).replace(/<\/?p>/g, '')
 
   return (
     <div className="accordion-item py-4">
