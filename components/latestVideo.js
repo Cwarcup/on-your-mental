@@ -47,12 +47,19 @@ const LatestVideo = () => {
     setEpisodeTitle(result.items[0].snippet.title)
     setEpisodeDescription(getDescription(result.items[0].snippet.description))
   })
+  console.log(episodeDescription)
 
   return (
     <div className="px-5">
       <YoutubeEmbed embedId={videoId} />
       <div className="pt-6 text-xl font-bold text-gray-900">{htmlDecode(episodeTitle)}</div>
-      <p className="prose m-4 max-w-none text-lg leading-7 text-gray-700">{episodeDescription}</p>
+      <p className="prose m-4 max-w-none text-lg leading-7 text-gray-700">
+        We’ve got a banger of a Check In episode for y’all! We hope this is the perfect start to
+        your week, come n hang out, get some laughs in, some good vibes, and get at it. These
+        episodes are always fun to shoot, and this one’s not different. If you’re new to us, we’re
+        scoring our work lives, personal lives, and mental health from 1 to 10, and having an open
+        discussion about it all!
+      </p>
     </div>
   )
 }
