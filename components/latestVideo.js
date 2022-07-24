@@ -15,7 +15,6 @@ const LatestVideo = () => {
 
   useEffect(() => {
     fetchData()
-    console.log('use effect ran')
   }, [])
 
   // get latest video from youtube, returns one video.
@@ -29,7 +28,6 @@ const LatestVideo = () => {
   const fetchData = async () => {
     try {
       const fetchResult = await axios(config)
-      console.log('before setData')
       setData(fetchResult.data.items)
       setVideoId(fetchResult.data.items[0].id.videoId)
       setEpisodeTitle(fetchResult.data.items[0].snippet.title)
@@ -44,7 +42,6 @@ const LatestVideo = () => {
   // takes in a video ID once it's been fetched from setData
   const getVideoDetails = async (videoId) => {
     await YTVideoIdDetails(videoId).then((result) => {
-      console.log('YTVideoIdDetails result: ', result)
       setEpisodeDescription(getDescription(result.items[0].snippet.description))
     })
   }
@@ -58,9 +55,15 @@ const LatestVideo = () => {
     <div className="px-5">
       <YoutubeEmbed embedId={videoId} />
       <div className="pt-6 text-xl font-bold text-gray-900">{htmlDecode(episodeTitle)}</div>
-      <p className="prose m-4 max-w-none text-lg leading-7 text-gray-700">{episodeDescription}</p>
+      {episodeDescription.map((item, index) => {
+        return (
+          <p className="prose m-4 max-w-none text-lg leading-7 text-gray-700" key={index}>
+            {item}
+          </p>
+        )
+      })}
     </div>
   )
 }
-//current
+
 export default LatestVideo
