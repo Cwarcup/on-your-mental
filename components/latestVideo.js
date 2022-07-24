@@ -13,14 +13,14 @@ const LatestVideo = () => {
   const [error, setError] = useState()
 
   // use the videoId to fetch the details of the video
-  const getAndSetSingleVideoDetails = (videoId) => {
-    YTVideoIdDetails(videoId).then((result) => {
-      // get the title and description of the video
-      setEpisodeTitle(result.items[0].snippet.title)
-      console.log('desc before any mods: ', result.items[0].snippet.description)
-      setEpisodeDescription(getDescription(result.items[0].snippet.description))
-    })
-  }
+  // const getAndSetSingleVideoDetails = (videoId) => {
+  //   YTVideoIdDetails(videoId).then((result) => {
+  //     // get the title and description of the video
+  //     setEpisodeTitle(result.items[0].snippet.title)
+  //     console.log('desc before any mods: ', result.items[0].snippet.description)
+  //     setEpisodeDescription(getDescription(result.items[0].snippet.description))
+  //   })
+  // }
 
   useEffect(() => {
     // get latest video from youtube, returns one video.
@@ -38,8 +38,17 @@ const LatestVideo = () => {
 
         // get video ID from data
         let videoId = data[0].id.videoId
+        let specificVideoDetails = YTVideoIdDetails(videoId)
+        // then((result) => {
+        // // get the title and description of the video
+        // setEpisodeTitle(result.items[0].snippet.title)
+        // console.log('desc before any mods: ', result.items[0].snippet.description)
+        // setEpisodeDescription(getDescription(result.items[0].snippet.description))
+        // })
 
-        getAndSetSingleVideoDetails(videoId)
+        setEpisodeTitle(specificVideoDetails.items[0].snippet.title)
+        // console.log('desc before any mods: ', result.items[0].snippet.description)
+        setEpisodeDescription(getDescription(specificVideoDetails.items[0].snippet.description))
       } catch (error) {
         console.log('error', error)
         setError(error)
@@ -52,12 +61,13 @@ const LatestVideo = () => {
   if (!data) {
     return <Loader />
   }
+  let videoId = data[0].id.videoId
 
   console.log(episodeDescription)
 
   return (
     <div className="px-5">
-      <YoutubeEmbed embedId={data[0].id.videoId} />
+      <YoutubeEmbed embedId={videoId} />
       <div className="pt-6 text-xl font-bold text-gray-900">{htmlDecode(episodeTitle)}</div>
       <p className="prose m-4 max-w-none text-lg leading-7 text-gray-700">
         We’ve got a banger of a Check In episode for y’all! We hope this is the perfect start to
