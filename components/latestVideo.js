@@ -12,6 +12,16 @@ const LatestVideo = () => {
   const [data, setData] = useState()
   const [error, setError] = useState()
 
+  // use the videoId to fetch the details of the video
+  const getAndSetSingleVideoDetails = (videoId) => {
+    YTVideoIdDetails(videoId).then((result) => {
+      // get the title and description of the video
+      setEpisodeTitle(result.items[0].snippet.title)
+      console.log('desc before any mods: ', result.items[0].snippet.description)
+      setEpisodeDescription(getDescription(result.items[0].snippet.description))
+    })
+  }
+
   useEffect(() => {
     // get latest video from youtube, returns one video.
     const config = {
@@ -29,12 +39,7 @@ const LatestVideo = () => {
         // get video ID from data
         let videoId = data[0].id.videoId
 
-        // use the videoId to fetch the details of the video
-        const details = YTVideoIdDetails(videoId).then((result) => {
-          // get the title and description of the video
-          setEpisodeTitle(result.items[0].snippet.title)
-          setEpisodeDescription(getDescription(result.items[0].snippet.description))
-        })
+        getAndSetSingleVideoDetails(videoId)
       } catch (error) {
         console.log('error', error)
         setError(error)
