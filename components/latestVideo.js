@@ -32,7 +32,7 @@ const LatestVideo = () => {
       setVideoId(fetchResult.data.items[0].id.videoId)
       setEpisodeTitle(fetchResult.data.items[0].snippet.title)
 
-      const description = getVideoDetails(fetchResult.data.items[0].id.videoId)
+      const description = await getVideoDetails(fetchResult.data.items[0].id.videoId)
     } catch (error) {
       console.log('error', error)
       setError(error)
@@ -42,8 +42,8 @@ const LatestVideo = () => {
   const getVideoDetails = async (videoId) => {
     const result = await YTVideoIdDetails(videoId)
     console.log('YTVideoIdDetails result: ', result)
-    const description = getDescription(result.items[0].snippet.description)
-    setEpisodeDescription(description)
+    const filteredDescription = getDescription(result.items[0].snippet.description)
+    setEpisodeDescription(filteredDescription)
   }
 
   // if data is empty, show loader
