@@ -39,11 +39,11 @@ const LatestVideo = () => {
     }
   }
 
-  // takes in a video ID once it's been fetched from setData
   const getVideoDetails = async (videoId) => {
-    await YTVideoIdDetails(videoId).then((result) => {
-      setEpisodeDescription(getDescription(result.items[0].snippet.description))
-    })
+    const result = await YTVideoIdDetails(videoId)
+    console.log('YTVideoIdDetails result: ', result)
+    const description = getDescription(result.items[0].snippet.description)
+    setEpisodeDescription(description)
   }
 
   // if data is empty, show loader
