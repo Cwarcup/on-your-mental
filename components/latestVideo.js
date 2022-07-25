@@ -47,7 +47,7 @@ const LatestVideo = () => {
   }
 
   // if data is empty, show loader
-  if (!data) {
+  if (!data || !videoId || !episodeTitle || !episodeDescription) {
     return <Loader />
   }
 
