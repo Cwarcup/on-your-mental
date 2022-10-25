@@ -30,7 +30,7 @@ I took inspiration from the other blogs linked in the README.md of the [Tailwind
 
 `latestVideo` component returns the latest video from the channel. It uses the `getDescription` function to get the relevant text from the YouTube video description.
 
-`YTVideoIdDetails` function gets specific details for a given YouTube video ID. This information is not available in the general list search API.
+`detailedYoutubeIDFetch` function gets specific details for a given YouTube video ID. This information is not available in the general list search API.
 
 ## Buzzsprout RSS Integration
 

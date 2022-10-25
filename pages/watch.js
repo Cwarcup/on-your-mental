@@ -9,7 +9,7 @@ export default function Episodes() {
 
   useEffect(() => {
     // gets list of videos from youtube channel
-    //gets 21 most recent videos
+    //gets 12 most recent videos
     const fetchVideosList = async () => {
       try {
         const result = await YoutubeChannelDetails()
