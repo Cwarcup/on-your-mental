@@ -10,7 +10,6 @@ const LatestVideo = () => {
   const [episodeTitle, setEpisodeTitle] = useState(null)
   const [episodeDescription, setEpisodeDescription] = useState(null)
   const [videoId, setVideoId] = useState(null)
-  const [error, setError] = useState(null)
 
   // get latest video from youtube, returns one video.
   // returns video id, title, short description, thumbnail
@@ -28,23 +27,18 @@ const LatestVideo = () => {
       // set videoID, used to fetch detailed video info
       setVideoId(fetchResult.data.items[0].id.videoId)
       setEpisodeTitle(fetchResult.data.items[0].snippet.title)
-
       const detailedDescription = await detailedYoutubeIDFetch(fetchResult.data.items[0].id.videoId) // fetch detailed video info
       const filteredDescription = getDescription(detailedDescription.items[0].snippet.description) // filter description, remove special characters
       setEpisodeDescription(filteredDescription) // set description
     } catch (error) {
       console.log('error', error)
-      setError(error)
     }
   }
 
+  // only run once on page load
   useEffect(() => {
     fetchData()
   }, [])
-
-  console.log('episodeTitle', episodeTitle)
-  console.log('episodeDescription', episodeDescription)
-  console.log('videoId', videoId)
 
   // if data is empty, show loader
   if (!videoId || !episodeTitle || !episodeDescription) {

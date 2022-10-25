@@ -50,7 +50,7 @@ export default function Home({ posts }) {
         </div>
       </div>
       <div className="flex flex-col items-center divide-y divide-gray-700 sm:content-center">
-        <div className="space-y-2 pt-4 pb-8 md:space-y-5">
+        <div className="max-w-sm space-y-2 pt-4 pb-8 sm:max-w-none md:space-y-5">
           <h1 className="ml-5 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Latest Episode
           </h1>

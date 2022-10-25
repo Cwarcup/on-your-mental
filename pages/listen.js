@@ -23,7 +23,6 @@ export default function ListenEpisodes() {
     }
     fetchData()
   }, [])
-  console.log(rssList)
 
   if (!rssList) {
     return <Loader />
