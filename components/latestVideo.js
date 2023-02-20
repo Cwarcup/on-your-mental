@@ -15,7 +15,7 @@ const LatestVideo = () => {
   // returns video id, title, short description, thumbnail
   const config = {
     method: 'get',
-    url: `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&channelId=UCYZNw4kprBNpxBrTcnNl_Kw&order=date&key=${process.env.NEXT_PUBLIC_YOUTUBE_API_KEY}`,
+    url: `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&channelId=UCYZNw4kprBNpxBrTcnNl_Kw&order=date&videoDuration=long&type=video&key=${process.env.NEXT_PUBLIC_YOUTUBE_API_KEY}`,
     headers: {},
   }
 
